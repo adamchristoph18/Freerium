@@ -1,4 +1,4 @@
-# Flask React Project
+# Freerium - A wellness app inspired by Quora.
 
 This is the starter for the Flask React project.
 
