@@ -1,0 +1,407 @@
+[
+    {
+        "user_id": 5,
+        "space_id": 1,
+        "title": "New Apple Watch",
+        "context": "My brother just got me an Apple Watch for my birthday. It's a great gift, and I'm extremely grateful. The issue is that I've never seen myself with a smart watch, but I know it can be helpful for health purposes. What should I do first with it, and what apps should I sync with it from my iPhone?",
+        "image_url": "https://photos5.appleinsider.com/gallery/36028-66657-000-lead-Apple-Watch-apps-l.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "space_id": 1,
+        "title": "Peloton Update",
+        "context": "I have had a Peloton for years with my spouse. We have enjoyed using it as a means for our exercise, and it's really convenient to have at the house. We noticed that there are constant software updates it seems. How often should we actually update our Peloton?",
+        "image_url": "https://cloud.starkinsider.com/wp-content/uploads/2020/04/Peloton-Alex-Toussaint-bike-class-tag-leaderboard-example.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 3,
+        "space_id": 1,
+        "title": "TV Shows",
+        "context": "I have been working three jobs for the past few years supporting my mom while she recovered from a hip and neck surgery. I haven't had any free time whatsoever, so I was looking for some suggestions on good TV shows to get into. What do people like the most right now?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 18,
+        "space_id": 1,
+        "title": "iPhone Apps",
+        "context": "I have had an iPhone for as long as I can remember. I haven't always been the person with a lot of apps on my phone, but I know there are some cool apps out there, especially ones related to wellness. What apps should I take a look at if i'm focusing on my overall health more?",
+        "image_url": "https://www.ironmountainhotsprings.com/wp-content/uploads/person-holding-space-gray-iphone-x-1440722.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 17,
+        "space_id": 1,
+        "title": "Smart TV",
+        "context": "I know spending more time in front of the TV and also aiming toward improving my personal health can sound contradictory, but I like to have the TV on while I cook and while I do things like laundry and clean around the house. Are there any health-related things my smart TV can do for me?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 16,
+        "space_id": 1,
+        "title": "Digital Scales",
+        "context": "I hate my scale I've had at my house for several years now, and have been putting off getting a new one. What kind of digital scale should I look into getting next?",
+        "image_url": "https://cdn.mos.cms.futurecdn.net/MxoHsNnHLoXcMZxrPRVePi.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 15,
+        "space_id": 1,
+        "title": "Smart Appliances",
+        "context": "I am very paranoid about what type of appliances I have in my house, as I live alone and I'm currently 76. I have heard on the TV that smart appliances are the way to go, but are they easy to use?",
+        "image_url": "https://www.the-ambient.com/media/imager/202109/30581-original.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 15,
+        "space_id": 1,
+        "title": "Electric Toothbrush",
+        "context": "Unfortunately, I am only in my early thirties, and I've already had over 45 cavities. I have finally decided that something needs to change. My dentist told me that I'm long overdue to get an electric toothbrush. What brand should I get?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 14,
+        "space_id": 1,
+        "title": "YouTube Channels",
+        "context": "Part of my reward this year from my company for celebrating my 40 years with them, I was gifted a YouTube premium subscription. I figure I have to use it, and was wondering if there are any accounts on YouTube that would be awesome to follow for health advice?",
+        "image_url": "https://techcrunch.com/wp-content/uploads/2020/06/GettyImages-1149449083.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 1,
+        "space_id": 7,
+        "title": "New Relationship",
+        "context": "I have been single for the better part of the last decade since my divorce. I have gotten used to not being in a relationship - until recently. I met this great new guy at work, and I'm sure he's going to ask me out soon. What kind of advice do you have for me, having been single for so long?",
+        "image_url": "https://www.talentedladiesclub.com/site/wp-content/uploads/How-soon-should-money-come-up-in-a-new-relationship.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 4,
+        "space_id": 7,
+        "title": "Ski Trip This Weekend",
+        "context": "I got roped into a ski trip this weekend. I'm not complaining, but I haven't gone skiing in years and all my friends are more experienced than I am. I definitely didn't want to turn down a chance to spend time outdoors though. I can't remember, what are some good stretches to do before hand? So I don't injure myself...",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "space_id": 2,
+        "title": "Marathon Coming Up",
+        "context": "I have hit all of my running goals this past year, and I have my first marathon coming up in a few months. What are some final preparations I should do to make sure everything goes well?",
+        "image_url": "https://images.everydayhealth.com/images/last-minute-marathon-tips-722x406.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 12,
+        "space_id": 2,
+        "title": "Canoe Trip Up North",
+        "context": "Next weekend, I'm going on a canoe trip up north by my friends family cabin. I'm looking forward to it, as I've wanted to focus more on my health and spending more time outdoors. The problem is I've never been on a canoe trip before, anything I should be aware of?",
+        "image_url": "https://www.fieldandstream.com/uploads/2019/12/19/ABCOMRJLP5EUHLEQR2EOL5YUT4.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 11,
+        "space_id": 2,
+        "title": "Run or Exercise at Home?",
+        "context": "My goal for the next year is to exercise and workout more for my overall health. I don't work from home anymore, so part of me wants to workout/exercise at home. Should I do that, or exercise outdoors somewhere?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 10,
+        "space_id": 2,
+        "title": "Stretching Advice",
+        "context": "I come from a family that is notoriously un-flexible and prone for injuries while working out or exercising. Lately, I've gotten more into concentrating on my health, but I know I need to stretch more. What are some of the best stretching routines I can do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 10,
+        "space_id": 3,
+        "title": "Wedding Coming Up",
+        "context": "I have a wedding coming up at the end of this month. I bought my dress over a year and a half ago, and it just barely doesn't fit currently. Any suggestions on losing a quick 5 pounds?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 10,
+        "space_id": 3,
+        "title": "Depressed",
+        "context": "Ever since the pandemic, I haven't felt like myself unfortunately. I am not a social person anymore, I barely see the friends I do have in person, and I feel like I'm stuck in a never-ending routine. How did you guys break your habits from the pandemic?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 9,
+        "space_id": 3,
+        "title": "Trying to Lose Weight",
+        "context": "My struggle for years pertaining to my personal health is having difficulty losing weight. It's always been something that I've been embarrassed about. I have tried numerous diets and exercise routines, and nothing seems to work. Any suggestions?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 4,
+        "space_id": 3,
+        "title": "Weighing Myself",
+        "context": "Ever since I was a little kid, I've been over weight. The fear of weighing myself and seeing that number on a scale isn't good for my mental health, but if I don't do that, I won't know if I make any progress on my goals. How have you guys overcome that fear?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 20,
+        "space_id": 3,
+        "title": "Drinking Water More Regularly",
+        "context": "One of the easiest things to do when trying to get healthier I figured is drinking water more consistently throughout the day. It's been much harder than I anticipated. What are some easy techniques I could employ to make sure I don't forget to drink throughout the day?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 1,
+        "space_id": 3,
+        "title": "Just Joined a GYM",
+        "context": "I have always been in shape without having to even try. I guess I'm just blessed that way. Recently though, I have joined a gym for the first time as I am trying to gain some muscle. I can't afford a trainer, and I go by myself. So I don't waste my time, how should I schedule out my gym time?",
+        "image_url": "https://www.theptdc.com/wp-content/uploads/2019/05/OpeningAGym_Feature-1.png",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 21,
+        "space_id": 3,
+        "title": "Feeling Down Lately",
+        "context": "I'm not sure what is going on with myself lately, but I haven't been feeling myself lately and every day seems the same. What are some suggestions to help me feel better faster?",
+        "image_url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/7233/hb-depression-0716207264919901.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 16,
+        "space_id": 4,
+        "title": "Can't Save Any Money",
+        "context": "All my life, I have been awful at saving money. As soon as I get money, it's gone in a matter of days. I need to save for some upcoming expenses I'll have in the next year of so. What the tips you can give me to become a saver?",
+        "image_url": "https://images.pexels.com/photos/4386442/pexels-photo-4386442.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4386442.jpg&fm=jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "space_id": 4,
+        "title": "Just Wrecked My Car",
+        "context": "I'm currently freaking out. The other day, I totaled my car and I live alone and have no way to get to my job. I need a new car soon, but I don't have any money saved, plus the used car market right now is ridiculous. I had PLPD insurance unfortunately too. What should I do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 5,
+        "space_id": 4,
+        "title": "Relative Just Stole Thousands of Dollars From Me",
+        "context": "My cousin recently stole a lot of money from me as we are in business together. Wrong, obviously, but our grandpa is in the hospital and only has a few months left. If I confront my cousin about it now, the business might get destroyed and that would break my grandpa. What should I do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 8,
+        "space_id": 4,
+        "title": "Behind on Rent",
+        "context": "I have 3 kids, 2 dogs, and am a single parent. I have been working from home, as my kids are young. I feel like I'm constantly busy, but unfortunately I'm behind on rent. What should I do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 8,
+        "space_id": 5,
+        "title": "Afraid to go to the Beach",
+        "context": "I am going to the Gulf next weekend with a family friend for a quick getaway. They are really into surfing and spending time at the beach all day, while I'd rather look in town and go shopping. I get burned by the sun easily, I don't like sand, and I can't swim. What should I do if they ask me to go to the beach with them?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 8,
+        "space_id": 5,
+        "title": "Haven't Left my Town in Years",
+        "context": "I am so excited as I'm traveling across the country next month to visit a friend I haven't seen since college. I haven't left my town in years. Has anything changed about traveling?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 6,
+        "space_id": 5,
+        "title": "Have Extra Airline Miles",
+        "context": "I have always had my own photography business, and traveled all around the world because of it. I just recently retired, and realized I had over a million free airline miles to use. My parents haven't gone on a trip in a while, and my friends have been asking as well. Should I give them away, or keep them so nobody gets left out?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "space_id": 5,
+        "title": "Europe or Elsewhere?",
+        "context": "I have reached all of my goals lately in terms of my career and my personal health. The last couple of years have been really good for me, so I figured now is a good time to go on a vacation. Should I travel to Europe for the first time, or try and see more of the United States?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "space_id": 5,
+        "title": "Have to Vacation with my Parents",
+        "context": "I haven't seen my parents in years, because I travel for work and we haven't always had the best relationship anyway. My brother who lives in New York has been really sick lately, and my parents asked if I wanted to travel there with them to stay with him for a few days. That's totally fine, but I'm worried about traveling with my parents, the trip will take 4 days. Any suggestions?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "space_id": 5,
+        "title": "Best People to RoadTrip With",
+        "context": "I have been wanting to go on a road trip for a while now, but I can't decide between going with my friends from college or my sisters. Who should I go with?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "space_id": 6,
+        "title": "Just Got Laid Off",
+        "context": "Unfortunately, I recently got laid off without notice and I'm not sure what I'm going to do next. I really liked my job, and had many friends there. I'm worried my anxiety would be bad if I took another job immediately just because I need the money. Should I take some time off first?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 7,
+        "space_id": 6,
+        "title": "Take the Promotion or Not",
+        "context": "I have been working on my mental health, as it has been something I've struggled with all my life it seems. Recently, at work, I've really enjoyed my position and my mental health has improved because of it. I was just offered a promotion for much more money, but I'd have a new boss and a new routine. What should I do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 11,
+        "space_id": 7,
+        "title": "Go Into Business with my Family?",
+        "context": "I have always had a great relationship with my brothers, and my family overall. We are talking about starting a business together, but I'm cautious about getting into business with direct family. Any advice for what I should do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 5,
+        "space_id": 7,
+        "title": "New Cottage or New Car?",
+        "context": "I have saved money all my life, and want to either invest in a new cottage to make family memories at, or buy a new car that I've always wanted. Buying the car would obviously be cheaper. What should I do?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 9,
+        "space_id": 7,
+        "title": "Best Reasons to Avoid Family on Holidays",
+        "context": "Every time I go home for the holidays, I end up getting in an argument with my relatives and it's not good for my mental health. What are some reason you've used to skip out on family gatherings?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 12,
+        "space_id": 7,
+        "title": "Should I get a Cat or a Dog?",
+        "context": "I have been feeling down since losing my husband of 60 years a few months ago. I have a great family in town that is awesome at supporting me, but when at home I feel so lonely, and I've decided to get a pet. Should I get a cat or a dog?",
+        "image_url": "https://d.newsweek.com/en/full/1898130/dog-cat-under-sheet.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 20,
+        "space_id": 7,
+        "title": "Best Movie Recommendations",
+        "context": "I've been really excited lately, as I've reached and beaten all of my health and fitness goals that I set for myself this past year. I figured I would treat myself and watch some movies. What are some movies I should check out?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "space_id": 7,
+        "title": "Midwest Escape",
+        "context": "I live in New Mexico, but my relatives all live in Michigan. My nephew is about to get married, and I'm looking forward to driving up to the midwest. Where should I stop along the way?",
+        "image_url": "https://cdn.crazyfamilyadventure.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-24-at-1.16.35-PM.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "space_id": 7,
+        "title": "Ex Dumped Me",
+        "context": "My ex dumped me out of the blue after we had dated for four years, and neglected to give me any good reasons. Should I contact him or not? I feel like I deserve closure.",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 15,
+        "space_id": 7,
+        "title": "Found Roadkill Near my House",
+        "context": "I have found a lot of roadkill around the streets by my house lately. The road commission guys that usually take care of it haven't come by lately and the smell has been driving me insane. What's the danger in taking care of it myself?",
+        "image_url": "https://st2.depositphotos.com/1591133/5867/i/950/depositphotos_58674055-stock-photo-roadkill-carcass-of-an-otter.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 6,
+        "space_id": 7,
+        "title": "New Hobby Idea",
+        "context": "Not going to lie, I have felt burntout with work lately and have spent too much time inside lately. My therapist recommended that I pick up a new hobby. What do you guys like to do outside that isn't too physically demanding?",
+        "image_url": "https://images.ctfassets.net/uq0sg0aynn6a/7nPnMjM5CQVgU7F9mDPqHk/7572de62315ddaefeb0a9404e7fa7b71/Burnout_to_Bliss.jpg",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 7,
+        "space_id": 7,
+        "title": "Old Photos Need to go",
+        "context": "I have been focusing a lot of my mental health lately, and my therapist advised that I get rid of a lot of clutter around the house. I have thousands of booklets of family photos I definitely want to keep. What is the best way to digitize my photo collection?",
+        "image_url": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 3,
+        "space_id": 7,
+        "title": "Birthday Ideas for Cousin",
+        "context": "I have a teenager cousin that I haven't seen in years, and I'm not close to his parents either at this point unfortunately. I'm going to see them soon, and his birthday is coming up. What should I get him?",
+        "image_url": "https://helios-i.mashable.com/imagery/articles/05lUhHtdEeJfvo4KVLV8qBX/hero-image.fill.size_1248x702.v1675442147.png",
+        "upvotes": 0,
+        "downvotes": 0
+    }
+]
