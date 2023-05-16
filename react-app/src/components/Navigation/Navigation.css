@@ -24,6 +24,10 @@
 
 .profile-dropdown {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 40px;
+  /* border: 2px solid green; */
 }
 
 .hidden {

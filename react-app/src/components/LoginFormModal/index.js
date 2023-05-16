@@ -21,6 +21,13 @@ function LoginFormModal() {
     }
   };
 
+  // demo user sign in
+  const demoUser = e => {
+    e.preventDefault();
+    return dispatch(login({ email: 'demo@aa.io', password: 'password' }))
+        .then(closeModal);
+  };
+
   return (
     <>
       <h1>Log In</h1>
@@ -34,6 +41,7 @@ function LoginFormModal() {
           Email
           <input
             type="text"
+            placeholder="Please provide your email here"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -43,6 +51,7 @@ function LoginFormModal() {
           Password
           <input
             type="password"
+            placeholder="Please provide your password here"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -50,6 +59,8 @@ function LoginFormModal() {
         </label>
         <button type="submit">Log In</button>
       </form>
+      <div className="demo-user-link clickable site-color" onClick={demoUser}>
+        Log in as a demo user instead!</div>
     </>
   );
 }
