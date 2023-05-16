@@ -1,0 +1,212 @@
+[
+    {
+        "user_id": 1,
+        "question_id": 1,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 1,
+        "question_id": 3,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 1,
+        "question_id": 5,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "question_id": 1,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "question_id": 3,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "question_id": 5,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 2,
+        "question_id": 7,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 4,
+        "question_id": 1,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 4,
+        "question_id": 2,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 6,
+        "question_id": 5,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 7,
+        "question_id": 6,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 7,
+        "question_id": 7,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 7,
+        "question_id": 8,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 8,
+        "question_id": 8,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 9,
+        "question_id": 8,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 10,
+        "question_id": 1,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 10,
+        "question_id": 3,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 11,
+        "question_id": 5,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 11,
+        "question_id": 9,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "question_id": 10,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "question_id": 11,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "question_id": 15,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 13,
+        "question_id": 4,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 14,
+        "question_id": 20,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 15,
+        "question_id": 21,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 16,
+        "question_id": 22,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 17,
+        "question_id": 23,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 18,
+        "question_id": 24,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 19,
+        "question_id": 33,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    },
+    {
+        "user_id": 21,
+        "question_id": 40,
+        "body": "",
+        "upvotes": 0,
+        "downvotes": 0
+    }
+]
