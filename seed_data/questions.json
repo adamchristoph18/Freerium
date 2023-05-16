@@ -111,8 +111,8 @@
         "user_id": 12,
         "space_id": 2,
         "title": "Canoe Trip Up North",
-        "context": "",
-        "image_url": "",
+        "context": "Next weekend, I'm going on a canoe trip up north by my friends family cabin. I'm looking forward to it, as I've wanted to focus more on my health and spending more time outdoors. The problem is I've never been on a canoe trip before, anything I should be aware of?",
+        "image_url": "https://www.fieldandstream.com/uploads/2019/12/19/ABCOMRJLP5EUHLEQR2EOL5YUT4.jpg",
         "upvotes": 0,
         "downvotes": 0
     },
@@ -120,7 +120,7 @@
         "user_id": 11,
         "space_id": 2,
         "title": "Run or Exercise at Home?",
-        "context": "",
+        "context": "My goal for the next year is to exercise and workout more for my overall health. I don't work from home anymore, so part of me wants to workout/exercise at home. Should I do that, or exercise outdoors somewhere?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -129,7 +129,7 @@
         "user_id": 10,
         "space_id": 2,
         "title": "Stretching Advice",
-        "context": "",
+        "context": "I come from a family that is notoriously un-flexible and prone for injuries while working out or exercising. Lately, I've gotten more into concentrating on my health, but I know I need to stretch more. What are some of the best stretching routines I can do?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -138,7 +138,7 @@
         "user_id": 10,
         "space_id": 3,
         "title": "Wedding Coming Up",
-        "context": "",
+        "context": "I have a wedding coming up at the end of this month. I bought my dress over a year and a half ago, and it just barely doesn't fit currently. Any suggestions on losing a quick 5 pounds?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -147,7 +147,7 @@
         "user_id": 10,
         "space_id": 3,
         "title": "Depressed",
-        "context": "",
+        "context": "Ever since the pandemic, I haven't felt like myself unfortunately. I am not a social person anymore, I barely see the friends I do have in person, and I feel like I'm stuck in a never-ending routine. How did you guys break your habits from the pandemic?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -156,7 +156,7 @@
         "user_id": 9,
         "space_id": 3,
         "title": "Trying to Lose Weight",
-        "context": "",
+        "context": "My struggle for years pertaining to my personal health is having difficulty losing weight. It's always been something that I've been embarrassed about. I have tried numerous diets and exercise routines, and nothing seems to work. Any suggestions?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -165,7 +165,7 @@
         "user_id": 4,
         "space_id": 3,
         "title": "Weighing Myself",
-        "context": "",
+        "context": "Ever since I was a little kid, I've been over weight. The fear of weighing myself and seeing that number on a scale isn't good for my mental health, but if I don't do that, I won't know if I make any progress on my goals. How have you guys overcome that fear?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -174,7 +174,7 @@
         "user_id": 20,
         "space_id": 3,
         "title": "Drinking Water More Regularly",
-        "context": "",
+        "context": "One of the easiest things to do when trying to get healthier I figured is drinking water more consistently throughout the day. It's been much harder than I anticipated. What are some easy techniques I could employ to make sure I don't forget to drink throughout the day?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -183,8 +183,8 @@
         "user_id": 1,
         "space_id": 3,
         "title": "Just Joined a GYM",
-        "context": "",
-        "image_url": "",
+        "context": "I have always been in shape without having to even try. I guess I'm just blessed that way. Recently though, I have joined a gym for the first time as I am trying to gain some muscle. I can't afford a trainer, and I go by myself. So I don't waste my time, how should I schedule out my gym time?",
+        "image_url": "https://www.theptdc.com/wp-content/uploads/2019/05/OpeningAGym_Feature-1.png",
         "upvotes": 0,
         "downvotes": 0
     },
@@ -192,8 +192,8 @@
         "user_id": 21,
         "space_id": 3,
         "title": "Feeling Down Lately",
-        "context": "",
-        "image_url": "",
+        "context": "I'm not sure what is going on with myself lately, but I haven't been feeling myself lately and every day seems the same. What are some suggestions to help me feel better faster?",
+        "image_url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/7233/hb-depression-0716207264919901.jpg",
         "upvotes": 0,
         "downvotes": 0
     },
@@ -201,8 +201,8 @@
         "user_id": 16,
         "space_id": 4,
         "title": "Can't Save Any Money",
-        "context": "",
-        "image_url": "",
+        "context": "All my life, I have been awful at saving money. As soon as I get money, it's gone in a matter of days. I need to save for some upcoming expenses I'll have in the next year of so. What the tips you can give me to become a saver?",
+        "image_url": "https://images.pexels.com/photos/4386442/pexels-photo-4386442.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4386442.jpg&fm=jpg",
         "upvotes": 0,
         "downvotes": 0
     },
@@ -210,7 +210,7 @@
         "user_id": 19,
         "space_id": 4,
         "title": "Just Wrecked My Car",
-        "context": "",
+        "context": "I'm currently freaking out. The other day, I totaled my car and I live alone and have no way to get to my job. I need a new car soon, but I don't have any money saved, plus the used car market right now is ridiculous. I had PLPD insurance unfortunately too. What should I do?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -219,7 +219,7 @@
         "user_id": 5,
         "space_id": 4,
         "title": "Relative Just Stole Thousands of Dollars From Me",
-        "context": "",
+        "context": "My cousin recently stole a lot of money from me as we are in business together. Wrong, obviously, but our grandpa is in the hospital and only has a few months left. If I confront my cousin about it now, the business might get destroyed and that would break my grandpa. What should I do?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -228,7 +228,7 @@
         "user_id": 8,
         "space_id": 4,
         "title": "Behind on Rent",
-        "context": "",
+        "context": "I have 3 kids, 2 dogs, and am a single parent. I have been working from home, as my kids are young. I feel like I'm constantly busy, but unfortunately I'm behind on rent. What should I do?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -237,7 +237,7 @@
         "user_id": 8,
         "space_id": 5,
         "title": "Afraid to go to the Beach",
-        "context": "",
+        "context": "I am going to the Gulf next weekend with a family friend for a quick getaway. They are really into surfing and spending time at the beach all day, while I'd rather look in town and go shopping. I get burned by the sun easily, I don't like sand, and I can't swim. What should I do if they ask me to go to the beach with them?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -246,7 +246,7 @@
         "user_id": 8,
         "space_id": 5,
         "title": "Haven't Left my Town in Years",
-        "context": "",
+        "context": "I am so excited as I'm traveling across the country next month to visit a friend I haven't seen since college. I haven't left my town in years. Has anything changed about traveling?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -255,7 +255,7 @@
         "user_id": 6,
         "space_id": 5,
         "title": "Have Extra Airline Miles",
-        "context": "",
+        "context": "I have always had my own photography business, and traveled all around the world because of it. I just recently retired, and realized I had over a million free airline miles to use. My parents haven't gone on a trip in a while, and my friends have been asking as well. Should I give them away, or keep them so nobody gets left out?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -264,7 +264,7 @@
         "user_id": 2,
         "space_id": 5,
         "title": "Europe or Elsewhere?",
-        "context": "",
+        "context": "I have reached all of my goals lately in terms of my career and my personal health. The last couple of years have been really good for me, so I figured now is a good time to go on a vacation. Should I travel to Europe for the first time, or try and see more of the United States?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -273,7 +273,7 @@
         "user_id": 19,
         "space_id": 5,
         "title": "Have to Vacation with my Parents",
-        "context": "",
+        "context": "I haven't seen my parents in years, because I travel for work and we haven't always had the best relationship anyway. My brother who lives in New York has been really sick lately, and my parents asked if I wanted to travel there with them to stay with him for a few days. That's totally fine, but I'm worried about traveling with my parents, the trip will take 4 days. Any suggestions?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -291,7 +291,7 @@
         "user_id": 19,
         "space_id": 6,
         "title": "Just Got Laid Off",
-        "context": "",
+        "context": "Unfortunately, I recently got laid off without notice and I'm not sure what I'm going to do next. I really liked my job, and had many friends there. I'm worried my anxiety would be bad if I took another job immediately just because I need the money. Should I take some time off first?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
@@ -300,7 +300,7 @@
         "user_id": 7,
         "space_id": 6,
         "title": "Take the Promotion or Not",
-        "context": "",
+        "context": "I have been working on my mental health, as it has been something I've struggled with all my life it seems. Recently, at work, I've really enjoyed my position and my mental health has improved because of it. I was just offered a promotion for much more money, but I'd have a new boss and a new routine. What should I do?",
         "image_url": "",
         "upvotes": 0,
         "downvotes": 0
