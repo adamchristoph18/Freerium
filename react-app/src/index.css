@@ -21,3 +21,16 @@
 .site-color {
     color: rgb(185, 43, 39);
 }
+
+.modal-input {
+    width: 90%;
+    margin: 5px 0 10px 10px;
+}
+
+.modal-input-label {
+    margin-left: 10px;
+}
+
+.modal-title {
+    margin-left: 10px;
+}

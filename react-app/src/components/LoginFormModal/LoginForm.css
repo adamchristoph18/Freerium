@@ -1,3 +1,13 @@
 .demo-user-link {
     text-decoration: underline;
+    margin: 0 0 20px 30px;
+}
+
+.login-modal {
+    display: flex;
+    flex-flow: column;
+}
+
+.login-button {
+    margin: 10px 0 15px 120px;
 }
