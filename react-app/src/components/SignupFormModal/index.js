@@ -6,9 +6,12 @@ import "./SignupForm.css";
 
 function SignupFormModal() {
 	const dispatch = useDispatch();
-	const [email, setEmail] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [profileImageUrl, setProfileImageUrl] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [errors, setErrors] = useState([]);
 	const { closeModal } = useModal();
@@ -16,7 +19,7 @@ function SignupFormModal() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (password === confirmPassword) {
-			const data = await dispatch(signUp(username, email, password));
+			const data = await dispatch(signUp(username, email, password, firstName, lastName, profileImageUrl));
 			if (data) {
 				setErrors(data);
 			} else {
@@ -31,50 +34,86 @@ function SignupFormModal() {
 
 	return (
 		<>
-			<h1>Sign Up</h1>
+			<h1 className="modal-title">Sign Up</h1>
 			<form onSubmit={handleSubmit}>
-				<ul>
-					{errors.map((error, idx) => (
-						<li key={idx}>{error}</li>
+				<div className='modal-errors'>
+					{Object.values(errors).map(error => (
+						<p key={error} className='error-p'>
+							{error}
+						</p>
 					))}
-				</ul>
-				<label>
-					Email
+				</div>
+				<label className="modal-input-label">
+					First Name
 					<input
 						type="text"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
+						placeholder="first name here"
+						className="modal-input"
+						value={firstName}
+						onChange={(e) => setFirstName(e.target.value)}
 					/>
 				</label>
-				<label>
+				<label className="modal-input-label">
+					Last Name
+					<input
+						type="text"
+						placeholder="last name here"
+						className="modal-input"
+						value={lastName}
+						onChange={(e) => setLastName(e.target.value)}
+					/>
+				</label>
+				<label className="modal-input-label">
 					Username
 					<input
 						type="text"
+						placeholder="pick a cool username!"
+						className="modal-input"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
-						required
 					/>
 				</label>
-				<label>
+				<label className="modal-input-label">
+					Email
+					<input
+						type="text"
+						placeholder="email here"
+						className="modal-input"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+				</label>
+				<label className="modal-input-label">
+					Profile Image URL (optional)
+					<input
+						type="text"
+						placeholder="image URL here"
+						className="modal-input"
+						value={profileImageUrl}
+						onChange={(e) => setProfileImageUrl(e.target.value)}
+					/>
+				</label>
+				<label className="modal-input-label">
 					Password
 					<input
 						type="password"
+						placeholder="strong passwords are suggested"
+						className="modal-input"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
-						required
 					/>
 				</label>
-				<label>
+				<label className="modal-input-label">
 					Confirm Password
 					<input
 						type="password"
+						placeholder="confirm password here"
+						className="modal-input"
 						value={confirmPassword}
 						onChange={(e) => setConfirmPassword(e.target.value)}
-						required
 					/>
 				</label>
-				<button type="submit">Sign Up</button>
+				<button className="sign-up-button" type="submit">Sign Up</button>
 			</form>
 		</>
 	);

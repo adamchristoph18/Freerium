@@ -29,7 +29,8 @@ export const authenticate = () => async (dispatch) => {
 	}
 };
 
-export const login = (email, password) => async (dispatch) => {
+export const login = (user) => async (dispatch) => {
+	const { email, password } = user;
 	const response = await fetch("/api/auth/login", {
 		method: "POST",
 		headers: {
@@ -67,7 +68,7 @@ export const logout = () => async (dispatch) => {
 	}
 };
 
-export const signUp = (username, email, password) => async (dispatch) => {
+export const signUp = (username, email, password, firstName, lastName, profileImageUrl) => async (dispatch) => {
 	const response = await fetch("/api/auth/signup", {
 		method: "POST",
 		headers: {
@@ -77,6 +78,9 @@ export const signUp = (username, email, password) => async (dispatch) => {
 			username,
 			email,
 			password,
+			firstName,
+			lastName,
+			profileImageUrl
 		}),
 	});
 

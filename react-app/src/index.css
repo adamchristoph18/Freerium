@@ -1,1 +1,41 @@
 /* TODO Add site wide styles */
+
+* {
+    font-family: 'Inter', sans-serif;
+    /* background-color: beige; */
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.site-color-b {
+    background-color: rgb(185, 43, 39);
+}
+
+.site-color {
+    color: rgb(185, 43, 39);
+}
+
+.modal-input {
+    width: 90%;
+    margin: 5px 0 10px 10px;
+}
+
+.modal-input-label {
+    margin-left: 10px;
+}
+
+.modal-title {
+    margin-left: 10px;
+}
+
+.modal-errors {
+    margin-left: 10px;
+    margin-right: 10px;
+}
