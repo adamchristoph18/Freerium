@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Inter', sans-serif;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 .clickable {
@@ -18,6 +18,6 @@
     background-color: rgb(185, 43, 39);
 }
 
-.site_color {
+.site-color {
     color: rgb(185, 43, 39);
 }
