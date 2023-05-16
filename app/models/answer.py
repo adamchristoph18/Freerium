@@ -10,9 +10,9 @@ class Answer(db.Model):
 
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.string(2000), nullable=False)
-    upvotes = db.Column(db.Integer, default=0)
-    downvotes = db.Column(db.Integer, default=0)
+    body = db.Column(db.String(2000), nullable=False)
+    upvotes = db.Column(db.Integer, nullable=False, default=0)
+    downvotes = db.Column(db.Integer, nullable=False, default=0)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
@@ -24,7 +24,7 @@ class Answer(db.Model):
 
     # Relationships
     question = db.relationship('Question', back_populates='answers')
-
+    user = db.relationship('User', back_populates='answers')
 
     def upvoted(self):
         return self.upvotes + 1

@@ -10,11 +10,11 @@ class Question(db.Model):
 
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.string(255), nullable=False)
-    context = db.Column(db.string(2000), nullable=False)
+    title = db.Column(db.String(255), nullable=False)
+    context = db.Column(db.String(2000), nullable=False)
     image_url = db.Column(db.String(500))
-    upvotes = db.Column(db.Integer, default=0)
-    downvotes = db.Column(db.Integer, default=0)
+    upvotes = db.Column(db.Integer, nullable=False, default=0)
+    downvotes = db.Column(db.Integer, nullable=False, default=0)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
@@ -30,10 +30,12 @@ class Question(db.Model):
     space = db.relationship('Space', back_populates='questions')
 
     def upvoted(self):
-        return self.upvotes + 1
+        self.upvotes += 1
+        return self.upvotes
 
     def downvoted(self):
-        return self.downvotes - 1
+        self.downvotes -= 1
+        return self.upvotes
 
     def to_dict(self):
         return {

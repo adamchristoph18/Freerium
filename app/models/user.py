@@ -23,7 +23,7 @@ class User(db.Model, UserMixin):
 
     # Relationships
     questions = db.relationship('Question', back_populates='user', cascade="all, delete-orphan")
-    answers = db.relationship()
+    answers = db.relationship('Answer', back_populates='user', cascade="all, delete-orphan")
 
     @property
     def password(self):
