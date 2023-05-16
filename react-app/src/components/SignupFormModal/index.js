@@ -6,8 +6,10 @@ import "./SignupForm.css";
 
 function SignupFormModal() {
 	const dispatch = useDispatch();
-	const [email, setEmail] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [profileImageUrl, setProfileImageUrl] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,7 +19,7 @@ function SignupFormModal() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (password === confirmPassword) {
-			const data = await dispatch(signUp(username, email, password));
+			const data = await dispatch(signUp(username, email, password, firstName, lastName, profileImageUrl));
 			if (data) {
 				setErrors(data);
 			} else {
@@ -34,20 +36,21 @@ function SignupFormModal() {
 		<>
 			<h1 className="modal-title">Sign Up</h1>
 			<form onSubmit={handleSubmit}>
-				<ul>
-					{errors.map((error, idx) => (
-						<li key={idx}>{error}</li>
+				<div className='modal-errors'>
+					{Object.values(errors).map(error => (
+						<p key={error} className='error-p'>
+							{error}
+						</p>
 					))}
-				</ul>
+				</div>
 				<label className="modal-input-label">
 					First Name
 					<input
 						type="text"
 						placeholder="first name here"
 						className="modal-input"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
+						value={firstName}
+						onChange={(e) => setFirstName(e.target.value)}
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -56,9 +59,8 @@ function SignupFormModal() {
 						type="text"
 						placeholder="last name here"
 						className="modal-input"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
+						value={lastName}
+						onChange={(e) => setLastName(e.target.value)}
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -69,7 +71,6 @@ function SignupFormModal() {
 						className="modal-input"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
-						required
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -80,7 +81,6 @@ function SignupFormModal() {
 						className="modal-input"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						required
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -91,7 +91,6 @@ function SignupFormModal() {
 						className="modal-input"
 						value={profileImageUrl}
 						onChange={(e) => setProfileImageUrl(e.target.value)}
-						required
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -102,7 +101,6 @@ function SignupFormModal() {
 						className="modal-input"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
-						required
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -113,7 +111,6 @@ function SignupFormModal() {
 						className="modal-input"
 						value={confirmPassword}
 						onChange={(e) => setConfirmPassword(e.target.value)}
-						required
 					/>
 				</label>
 				<button className="sign-up-button" type="submit">Sign Up</button>
