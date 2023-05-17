@@ -3,7 +3,7 @@ import "./QuestionCard.css";
 
 function QuestionCard({ question }) {
     return (
-        <div className="question-card">
+        <div className="question-card clickable">
             <div className="question-title">
                 {question.title}
             </div>
