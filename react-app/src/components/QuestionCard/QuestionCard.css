@@ -3,7 +3,9 @@
     flex-flow: column;
     width: 100%;
     margin: 10px 0;
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    border-radius: 10px;
+    background-color: beige;
 }
 
 .question-title {
@@ -13,9 +15,10 @@
 
 .question-context {
     font-size: 14px;
-    margin: 0 5px;
+    margin: 0 0 5px 5px;
 }
 
 .question-image {
     width: 500px;
+    border-radius: 5px;
 }
