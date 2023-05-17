@@ -24,7 +24,9 @@ function Navigation({ isLoaded }){
 			{sessionUser && (
 				<OpenCreateQuestionModalButton
 					buttonText="Add question"
-					modalComponent={QuestionFormModal}
+					modalComponent={
+						<QuestionFormModal type='create' title='Add a new question' />
+					}
 				/>
 			)}
 

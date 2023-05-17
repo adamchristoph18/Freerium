@@ -1,0 +1,11 @@
+.submit-question {
+    color: white;
+    margin: 10px 0 20px 90px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.submit-question:hover {
+    box-shadow: 3px 3px 2px rgba(128, 128, 128, .3);
+    transition: ease-in .15s;
+}
