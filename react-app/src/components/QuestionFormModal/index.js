@@ -18,24 +18,39 @@ function QuestionFormModal({ type, title }) {
 
     const spaces = ['Technology', 'Exercise', 'Personal Health', 'Financial Well-Being', 'Travel', 'Career Goals', 'Miscellaneous'];
 
-    const spacesObj = {
-        'Technology': 1,
-        'Exercise': 2,
-        'Personal Health': 3,
-        'Financial Well-Being': 4,
-        'Travel': 5,
-        'Career Goals': 6,
-        'Miscellaneous': 7
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const spacesObj = {
+            'Technology': 1,
+            'Exercise': 2,
+            'Personal Health': 3,
+            'Financial Well-Being': 4,
+            'Travel': 5,
+            'Career Goals': 6,
+            'Miscellaneous': 7
+        };
+
+        const question = {
+            title: questionTitle,
+            context,
+            imageUrl,
+            upvotes: 0,
+            downvotes: 0,
+            userId: sessionUser.id,
+            spaceId: spacesObj[space]
+        };
+
         let data;
         if (type === "create") {
-            data = await dispatch(addNewQuestionThunk({
+            data = await dispatch(addNewQuestionThunk(question));
+        }
 
-            }))
+        if (data) {
+            setErrors(data);
+        } else {
+            closeModal();
         }
     }
 
@@ -43,6 +58,9 @@ function QuestionFormModal({ type, title }) {
         <>
             <h2 className="modal-title">{title}</h2>
             <form onSubmit={handleSubmit}>
+                {Object.values(errors).length > 0 && (
+                    <ErrorHandler errors={errors} />
+                )}
                 <label className="modal-input-label">
                     Title
                     <input
@@ -61,8 +79,8 @@ function QuestionFormModal({ type, title }) {
                         placeholder="Provide the reasoning and thought to your question here"
                         className="modal-input question-reasoning"
                         name='questionTitle'
-                        value={questionTitle}
-                        onChange={(e) => setQuestionTitle(e.target.value)}
+                        value={context}
+                        onChange={(e) => setContext(e.target.value)}
                     />
                 </label>
                 <label className="modal-input-label">
@@ -89,8 +107,8 @@ function QuestionFormModal({ type, title }) {
                         placeholder="Image URL to support your question"
                         className="modal-input"
                         name='questionTitle'
-                        value={questionTitle}
-                        onChange={(e) => setQuestionTitle(e.target.value)}
+                        value={imageUrl}
+                        onChange={(e) => setImageUrl(e.target.value)}
                     />
                 </label>
                 <button className="clickable submit-question site-color-b" type="submit">Add Question</button>

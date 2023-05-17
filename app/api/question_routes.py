@@ -52,3 +52,5 @@ def add_question():
 
     db.session.add(new_question)
     db.session.commit()
+
+    return {"question": new_question.to_dict()}

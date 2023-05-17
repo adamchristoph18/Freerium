@@ -7,13 +7,13 @@ import "./AllQuestions.css";
 
 function AllQuestions() {
     const questionsObject = useSelector(state => state.questions.allQuestions);
-    const questions = Object.values(questionsObject);
+    const questions = Object.values(questionsObject).reverse();
 
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getAllQuestionsThunk())
-    }, [dispatch]);
+    }, [dispatch, questions.length]);
 
     return (
         <div className="all-questions-div">

@@ -38,7 +38,7 @@ export const addNewQuestionThunk = (question) => async (dispatch) => {
     });
 
     if (response.ok) {
-        const question = await response.json();
+        const { question } = await response.json();
         dispatch(addQuestion(question));
         return null;
     } else {
