@@ -42,3 +42,11 @@
 .hidden {
   display: none;
 }
+
+
+.profile-icon {
+  position: absolute;
+  top: 20px;
+  left: 70%;
+  font-size: 25px;
+}
