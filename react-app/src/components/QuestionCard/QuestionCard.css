@@ -3,10 +3,10 @@
     flex-flow: column;
     width: 100%;
     margin: 10px 0;
-    /* border: 1px solid green; */
     border-radius: 10px;
     transition: transform .2s;
     background-color: beige;
+    /* border: 1px solid green; */
 }
 
 .question-card:hover {

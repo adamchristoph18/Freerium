@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
+import OpenCreateQuestionModalButton from '../OpenCreateQuestionModalButton';
+import CreateQuestionModal from '../CreateQuestionModal';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
@@ -20,6 +22,14 @@ function Navigation({ isLoaded }){
 					<ProfileButton user={sessionUser} />
 				</div>
 			)}
+
+			{sessionUser && (
+				<OpenCreateQuestionModalButton
+				buttonText="Add question"
+				modalComponent={CreateQuestionModal}
+				/>
+			)}
+
 		</div>
 	);
 }
