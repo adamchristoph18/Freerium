@@ -1,6 +1,6 @@
 .submit-question {
     color: white;
-    margin: 10px 0 20px 90px;
+    margin: 10px 0 20px 100px;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
 }
@@ -8,4 +8,21 @@
 .submit-question:hover {
     box-shadow: 3px 3px 2px rgba(128, 128, 128, .3);
     transition: ease-in .15s;
+}
+
+.space-select {
+    margin-left: 14px;
+}
+
+.question-reasoning {
+    height: 350px;
+    resize: none;
+}
+
+.context-header {
+    margin-top: 50px;
+}
+
+select {
+    margin-bottom: 15px;
 }
