@@ -8,4 +8,4 @@ class QuestionForm(FlaskForm):
     space = SelectField('space', choices=spaces, validators=[DataRequired()])
     title = StringField('title', validators=[DataRequired()])
     context = StringField('context', validators=[DataRequired()])
-    image_url = StringField('Image') # Not required, going to update later with AWS anyway
+    imageUrl = StringField('imageUrl') # Not required, going to update later with AWS anyway
