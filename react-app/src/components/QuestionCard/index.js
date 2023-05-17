@@ -3,9 +3,14 @@ import "./QuestionCard.css";
 
 function QuestionCard({ question }) {
     return (
-        <>
-            {question.context}
-        </>
+        <div className="question-card">
+            <div>
+                {question.title}
+            </div>
+            <div>
+                {question.context}
+            </div>
+        </div>
     )
 }
 

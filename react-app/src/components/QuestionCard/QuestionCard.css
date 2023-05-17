@@ -1,0 +1,7 @@
+.question-card {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid green;
+}
