@@ -5,6 +5,10 @@
     /* background-color: beige; */
 }
 
+.whole-site {
+    max-width: 1400px;
+}
+
 .clickable {
     cursor: pointer;
 }

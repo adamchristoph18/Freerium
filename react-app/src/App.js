@@ -13,14 +13,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="whole-site">
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
           <Route exact path="/"><AllQuestions /></Route>
         </Switch>
       )}
-    </>
+    </div>
   );
 }
 
