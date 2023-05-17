@@ -5,3 +5,17 @@
     margin: 10px 0;
     border: 1px solid green;
 }
+
+.question-title {
+    font-size: 20px;
+    margin: 5px 0 5px 5px;
+}
+
+.question-context {
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.question-image {
+    width: 500px;
+}
