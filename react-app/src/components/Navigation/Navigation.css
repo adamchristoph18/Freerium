@@ -1,5 +1,33 @@
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* border: 2px solid blue; */
+}
+
+.freerium-title {
+  font-weight: bolder;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.house-icon {
+  font-size: 30px;
+  margin-left: 25px;
+}
+
+
+
+
+
+
 .profile-dropdown {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 40px;
+  /* border: 2px solid green; */
 }
 
 .hidden {
