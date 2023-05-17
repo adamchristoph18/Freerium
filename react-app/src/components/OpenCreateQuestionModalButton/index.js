@@ -17,7 +17,9 @@ function OpenCreateQuestionModalButton({
   };
 
   return (
-    <button onClick={onClick}>{buttonText}</button>
+    <button
+      className='add-question-button site-color-b clickable'
+      onClick={onClick}>{buttonText}</button>
   );
 }
 
