@@ -1,6 +1,7 @@
 // Action type constants
 const GET_ALL_QUESTIONS = "questions/GET_ALL_QUESTIONS";
 const ADD_QUESTION = "questions/ADD_QUESTION";
+const DELETE_QUESTION = "questions/DELETE_QUESTION";
 
 // Action creators
 const getAllQuestions = (questions) => ({
@@ -12,6 +13,11 @@ const addQuestion = (question) => ({
     type: ADD_QUESTION,
     question
 });
+
+const deleteQuestion = (questionId) => ({
+    type: DELETE_QUESTION,
+    questionId
+})
 
 // Thunk Action Creators
 export const getAllQuestionsThunk = () => async (dispatch) => {
@@ -47,6 +53,16 @@ export const addNewQuestionThunk = (question) => async (dispatch) => {
     }
 }
 
+export const deleteQuestionThunk = (questionId) => async (dispatch) => {
+    const response = await fetch(`/api/questions/${questionId}/delete`, {
+        method: "DELETE"
+    });
+
+    if (response.ok) {
+        dispatch(deleteQuestion(questionId));
+    }
+}
+
 // Questions reducer
 
 const initialState = { allQuestions: {} };
@@ -63,6 +79,11 @@ const questionsReducer = (state = initialState, action) => {
         case ADD_QUESTION: {
             const newState = {...state, allQuestions: {...state.allQuestions}};
             newState.allQuestions[action.question.id] = action.question;
+            return newState;
+        }
+        case DELETE_QUESTION: {
+            const newState = {...state, allQuestions: {...state.allQuestions}};
+            delete newState.allQuestions[action.questionId];
             return newState;
         }
         default:
