@@ -3,7 +3,9 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  /* border: 2px solid blue; */
+  background-color: white;
+  position: sticky;
+  top: 0;
 }
 
 .freerium-title {
@@ -17,19 +19,34 @@
   margin-left: 25px;
 }
 
-
-
-
-
+.log-out {
+  color: white;
+  padding: 5px 15px 5px 15px;
+  margin: 10px 0 10px 0;
+  border-radius: 10px;
+}
 
 .profile-dropdown {
-  position: absolute;
+  position: fixed;
+  top: 60px;
+  right: 80px;
+  width: 250px;
   display: flex;
+  align-items: center;
+  flex-flow: column;
   justify-content: space-between;
-  right: 40px;
-  /* border: 2px solid green; */
+  background-color: white;
+  border: 2px solid green;
 }
 
 .hidden {
   display: none;
+}
+
+
+.profile-icon {
+  position: absolute;
+  top: 20px;
+  left: 70%;
+  font-size: 25px;
 }
