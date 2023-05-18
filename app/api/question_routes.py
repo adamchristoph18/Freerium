@@ -54,3 +54,20 @@ def add_question():
     db.session.commit()
 
     return {"question": new_question.to_dict()}
+
+
+@question_routes.route('/<int:id>/delete', methods=['DELETE'])
+@login_required
+def delete_question(id):
+    """
+    Route to delete a question
+    """
+    question = Question.query.get(id)
+
+    if not question:
+        return {'error': 'question not found'}
+
+    db.session.delete(question)
+    db.session.commit()
+
+    return {'question': 'question successfully deleted.'}

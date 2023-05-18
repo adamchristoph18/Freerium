@@ -1,0 +1,19 @@
+.are-u-sure-delete {
+    margin-right: 10px;
+}
+
+.yes-confirm {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.no-forget-it {
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}

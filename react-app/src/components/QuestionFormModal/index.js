@@ -2,21 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { addNewQuestionThunk } from "../../store/questions";
-import ErrorHandler from "../ErrorHandler";
 import "./QuestionFormModal.css";
 
 function QuestionFormModal({ type, title }) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [questionTitle, setQuestionTitle] = useState("");
-    const [space, setSpace] = useState("");
+    const [space, setSpace] = useState("Miscellaneous");
     const [context, setContext] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
 
-    const spaces = ['Technology', 'Exercise', 'Personal Health', 'Financial Well-Being', 'Travel', 'Career Goals', 'Miscellaneous'];
+    const spaces = ['Technology', 'Exercise', 'Personal Health', 'Financial Well-Being', 'Travel', 'Career Goals'];
 
 
     const handleSubmit = async (e) => {
@@ -41,6 +40,8 @@ function QuestionFormModal({ type, title }) {
             userId: sessionUser.id,
             spaceId: spacesObj[space]
         };
+
+        console.log('dissss ---------> ', question);
 
         let data;
         if (type === "create") {
@@ -90,10 +91,11 @@ function QuestionFormModal({ type, title }) {
                 <label className="modal-input-label">
                     Select a Space
                     <select
-                    className="space-select"
-                    value={space}
-                    onChange={(e) => setSpace(e.target.value)}
+                        className="space-select"
+                        value={space}
+                        onChange={(e) => setSpace(e.target.value)}
                     >
+                        <option value="" selected="selected">Miscellaneous</option>
                     {spaces.map(space => (
                         <option
                         key={space}
