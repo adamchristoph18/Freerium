@@ -26,7 +26,7 @@ class Question(db.Model):
 
     # Relationships
     user = db.relationship('User', back_populates='questions')
-    answers = db.relationship('Answer', back_populates='question')
+    answers = db.relationship('Answer', back_populates='question', cascade="all, delete-orphan")
     space = db.relationship('Space', back_populates='questions')
 
     def upvoted(self):
