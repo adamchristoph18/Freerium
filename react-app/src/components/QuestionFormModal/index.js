@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
-import { addNewQuestionThunk } from "../../store/questions";
+import { addNewQuestionThunk, updateQuestionThunk } from "../../store/questions";
 import "./QuestionFormModal.css";
 
 function QuestionFormModal({ type, title, question }) {
@@ -38,7 +38,7 @@ function QuestionFormModal({ type, title, question }) {
             'Miscellaneous': 7
         };
 
-        const question = {
+        const newQuestion = {
             title: questionTitle,
             context,
             imageUrl,
@@ -48,9 +48,18 @@ function QuestionFormModal({ type, title, question }) {
             spaceId: spacesObj[space]
         };
 
+        const updatedQuestion = {
+            id: question?.id,
+            title: questionTitle,
+            context,
+            imageUrl
+        };
+
         let data;
         if (type === "create") {
-            data = await dispatch(addNewQuestionThunk(question));
+            data = await dispatch(addNewQuestionThunk(newQuestion));
+        } else {
+            data = await dispatch(updateQuestionThunk(updatedQuestion));
         }
 
         if (data) {
