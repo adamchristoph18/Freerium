@@ -15,17 +15,31 @@
     transition: ease-in .15s;
 }
 
+.question-top-line {
+    display: flex;
+}
+
+.question-author {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+
 .question-title {
     font-size: 20px;
     margin: 5px 0 5px 5px;
+    word-wrap: break-word;
 }
 
 .question-context {
     font-size: 14px;
     margin: 0 0 5px 5px;
+    word-wrap: break-word;
 }
 
 .question-image {
     width: 500px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }

@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import AllQuestions from "./components/AllQuestions";
+import QuestionShow from "./components/QuestionShow";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,14 +14,15 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="whole-site">
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
           <Route exact path="/"><AllQuestions /></Route>
+          <Route path="/questions/:questionId"><QuestionShow /></Route>
         </Switch>
       )}
-    </>
+    </div>
   );
 }
 

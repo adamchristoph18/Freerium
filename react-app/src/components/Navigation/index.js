@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import OpenCreateQuestionModalButton from '../OpenCreateQuestionModalButton';
-import CreateQuestionModal from '../CreateQuestionModal';
+import QuestionFormModal from '../QuestionFormModal';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
@@ -12,9 +12,7 @@ function Navigation({ isLoaded }){
 	return (
 		<div className='navigation-bar'>
 			<div>
-				<NavLink exact to='/' className='site-color freerium-title'>
-					Freerium
-				</NavLink>
+				<NavLink exact to='/' className='site-color freerium-title'>Freerium</NavLink>
 				{/* <i className="fa-sharp fa-solid fa-house house-icon site-color clickable" /> */}
 			</div>
 			{isLoaded && (
@@ -25,8 +23,10 @@ function Navigation({ isLoaded }){
 
 			{sessionUser && (
 				<OpenCreateQuestionModalButton
-				buttonText="Add question"
-				modalComponent={CreateQuestionModal}
+					buttonText="Add question"
+					modalComponent={
+						<QuestionFormModal type='create' title='Add a new question' />
+					}
 				/>
 			)}
 
