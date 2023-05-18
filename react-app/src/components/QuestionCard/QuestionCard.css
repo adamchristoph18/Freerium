@@ -29,11 +29,13 @@
 .question-title {
     font-size: 20px;
     margin: 5px 0 5px 5px;
+    word-wrap: break-word;
 }
 
 .question-context {
     font-size: 14px;
     margin: 0 0 5px 5px;
+    word-wrap: break-word;
 }
 
 .question-image {
