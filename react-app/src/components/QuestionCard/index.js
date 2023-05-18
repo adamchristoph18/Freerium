@@ -48,7 +48,7 @@ function QuestionCard({ question }) {
                     <OpenUpdateQuestionModalButton
                         buttonText="Update"
                         modalComponent={
-                            <QuestionFormModal type="update" />
+                            <QuestionFormModal type='update' title='Update this question' question={question} />
                         }
                     />
                 </div>

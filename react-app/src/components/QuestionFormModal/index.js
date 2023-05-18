@@ -4,7 +4,7 @@ import { useModal } from "../../context/Modal";
 import { addNewQuestionThunk } from "../../store/questions";
 import "./QuestionFormModal.css";
 
-function QuestionFormModal({ type, title }) {
+function QuestionFormModal({ type, title, question }) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [questionTitle, setQuestionTitle] = useState("");
@@ -17,6 +17,13 @@ function QuestionFormModal({ type, title }) {
 
     const spaces = ['Technology', 'Exercise', 'Personal Health', 'Financial Well-Being', 'Travel', 'Career Goals'];
 
+    useEffect(() => {
+        if (type === 'update') {
+            setQuestionTitle(question.title);
+            setContext(question.context);
+            setImageUrl(question.image_url);
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,8 +47,6 @@ function QuestionFormModal({ type, title }) {
             userId: sessionUser.id,
             spaceId: spacesObj[space]
         };
-
-        console.log('dissss ---------> ', question);
 
         let data;
         if (type === "create") {
@@ -88,7 +93,8 @@ function QuestionFormModal({ type, title }) {
                         onChange={(e) => setContext(e.target.value)}
                     />
                 </label>
-                <label className="modal-input-label">
+                {type === 'create' && (
+                    <label className="modal-input-label">
                     Select a Space
                     <select
                         className="space-select"
@@ -106,6 +112,7 @@ function QuestionFormModal({ type, title }) {
                     ))}
                     </select>
                 </label>
+                )}
                 <label className="modal-input-label">
                     Image URL (Optional)
                     <input

@@ -56,6 +56,31 @@ def add_question():
     return {"question": new_question.to_dict()}
 
 
+@question_routes.route('/<int:id>/update', methods=['PUT'])
+@login_required
+def update_question(id):
+    """
+    Route to update a single question by id
+    """
+    form = QuestionForm()
+    # Get the csrf_token from the request cookie and put it into the
+    # form manually to validate_on_submit can be used
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    if not form.validate_on_submit():
+        return {"errors": validation_errors_to_error_messages(form.errors)}, 401
+
+    p = request.json
+    question = Question.query.get(id)
+
+    question.title = p['title']
+    question.context = p['context']
+    question.image_url = p['imageUrl']
+
+    db.session.commit()
+    return {"question": question.to_dict()}
+
+
 @question_routes.route('/<int:id>/delete', methods=['DELETE'])
 @login_required
 def delete_question(id):
