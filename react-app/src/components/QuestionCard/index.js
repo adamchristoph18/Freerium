@@ -9,7 +9,7 @@ function QuestionCard({ question }) {
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
 
-    const userWroteQuestion = () => author.id === sessionUser.id;
+    const userWroteQuestion = () => author.id === sessionUser?.id;
 
     return (
         <div className="question-card clickable" onClick={(e) => history.push(`/questions/${question.id}`)}>
