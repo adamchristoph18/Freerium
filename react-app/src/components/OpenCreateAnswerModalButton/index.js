@@ -18,7 +18,7 @@ function OpenCreateAnswerModalButton({
 
   return (
     <button
-      className='add-question-button site-color-b clickable'
+      className='add-answer-button site-color-b clickable'
       onClick={onClick}>{buttonText}</button>
   );
 }

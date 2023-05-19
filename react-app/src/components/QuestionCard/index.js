@@ -57,7 +57,7 @@ function QuestionCard({ question }) {
                 </div>
             ) :
                     <OpenCreateAnswerModalButton
-                        buttonText="Answer This Question"
+                        buttonText="Add a new Answer"
                         modalComponent={
                             <AnswerFormModal type='create' title='Add a New Answer' />
                         }
