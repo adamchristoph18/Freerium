@@ -6,6 +6,7 @@
     border-radius: 10px;
     transition: transform .2s;
     background-color: rgba(245, 245, 220, .9);
+    box-shadow: 3px 3px 2px rgba(128, 128, 128, .3);
 }
 
 .answer-author {
