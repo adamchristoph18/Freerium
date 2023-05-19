@@ -10,7 +10,8 @@ function OpenCreateAnswerModalButton({
 }) {
   const { setModalContent, setOnModalClose } = useModal();
 
-  const onClick = () => {
+  const onClick = (e) => {
+    e.stopPropagation();
     if (onModalClose) setOnModalClose(onModalClose);
     setModalContent(modalComponent);
     if (onButtonClick) onButtonClick();
@@ -18,7 +19,7 @@ function OpenCreateAnswerModalButton({
 
   return (
     <button
-      className='add-answer-button site-color-b clickable'
+      className='add-answer-button clickable'
       onClick={onClick}>{buttonText}</button>
   );
 }

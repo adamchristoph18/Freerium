@@ -9,6 +9,7 @@ function AnswerFormModal({ type, title }) {
 
     return (
         <>
+            <h2 className="modal-title">{title}</h2>
         </>
     )
 }
