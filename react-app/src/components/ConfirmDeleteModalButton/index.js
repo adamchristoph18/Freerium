@@ -1,26 +1,29 @@
 import { useModal } from "../../context/Modal";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteQuestionThunk } from "../../store/questions";
 import "./ConfirmDeleteModalButton.css";
 
 function ConfirmDeleteModalButton({ question }) {
     const { closeModal } = useModal();
+    const history = useHistory();
     const dispatch = useDispatch();
 
     return (
         <>
-            <h2 className="modal-title are-u-sure-delete">Are you sure you want to delete this question?</h2>
+            <h2 className="modal-title are-u-sure-delete">Delete your question titled "{question.title}"?</h2>
             <div
                 className="yes-confirm clickable site-color-b"
                 onClick={() => {
                     dispatch(deleteQuestionThunk(question.id));
+                    history.push('/');
                     closeModal();
                 }}
             >
-                Yes, I'd like to delete my post I titled "{question.title}"
+                Yes please!
             </div>
             <div className="no-forget-it clickable site-color-b" onClick={closeModal}>
-                No, I'd like to NOT DELETE
+                No, thanks
             </div>
         </>
     )

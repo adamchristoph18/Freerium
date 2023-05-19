@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { addNewQuestionThunk, updateQuestionThunk } from "../../store/questions";
@@ -11,6 +12,7 @@ function QuestionFormModal({ type, title, question }) {
     const [space, setSpace] = useState("Miscellaneous");
     const [context, setContext] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+    const history = useHistory();
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
@@ -133,7 +135,8 @@ function QuestionFormModal({ type, title, question }) {
                         onChange={(e) => setImageUrl(e.target.value)}
                     />
                 </label>
-                <button className="clickable submit-question site-color-b" type="submit">Add Question</button>
+                <button className="clickable submit-question site-color-b" type="submit">
+                    {type === 'create' ? "Add Question" : "Update Question"}</button>
             </form>
         </>
     )

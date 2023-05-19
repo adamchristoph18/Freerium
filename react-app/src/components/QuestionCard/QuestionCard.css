@@ -17,13 +17,14 @@
 
 .question-top-line {
     display: flex;
+    flex-flow: column;
 }
 
 .question-author {
     font-size: 12px;
     font-style: italic;
     margin-left: 5px;
-    margin-top: 12px;
+    margin-bottom: 5px;
 }
 
 .question-title {
@@ -32,14 +33,27 @@
     word-wrap: break-word;
 }
 
+.answers-to-question-line {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
 .question-context {
     font-size: 14px;
-    margin: 0 0 5px 5px;
+    margin: 0 5px 10px 5px;
     word-wrap: break-word;
 }
 
 .question-image {
-    width: 500px;
+    width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.author-options {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10px;
+    margin-top: -5px;
 }

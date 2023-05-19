@@ -3,6 +3,7 @@ const GET_ALL_QUESTIONS = "questions/GET_ALL_QUESTIONS";
 const ADD_QUESTION = "questions/ADD_QUESTION";
 const DELETE_QUESTION = "questions/DELETE_QUESTION";
 const UPDATE_QUESTION = "questions/UPDATE_QUESTION";
+const DISPLAY_QUESTION = "questions/DISPLAY_QUESTION";
 
 // Action creators
 const getAllQuestions = (questions) => ({
@@ -22,6 +23,11 @@ const deleteQuestion = (questionId) => ({
 
 const updateQuestion = (question) => ({
     type: UPDATE_QUESTION,
+    question
+});
+
+const getSingleQuestion = (question) => ({
+    type: DISPLAY_QUESTION,
     question
 });
 
@@ -79,6 +85,17 @@ export const updateQuestionThunk = (question) => async (dispatch) => {
     }
 }
 
+export const displayQuestionThunk = (questionId) => async (dispatch) => {
+    const response = await fetch(`/api/questions/${questionId}`);
+    if (response.ok) {
+        const { question } = await response.json();
+        dispatch(getSingleQuestion(question));
+        return question;
+    } else {
+        const errorResponse = await response.json();
+        return errorResponse.errors;
+    }
+};
 
 export const deleteQuestionThunk = (questionId) => async (dispatch) => {
     const response = await fetch(`/api/questions/${questionId}/delete`, {
@@ -92,7 +109,7 @@ export const deleteQuestionThunk = (questionId) => async (dispatch) => {
 
 // Questions reducer
 
-const initialState = { allQuestions: {} };
+const initialState = { allQuestions: {}, singleQuestion: null };
 
 const questionsReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -116,6 +133,12 @@ const questionsReducer = (state = initialState, action) => {
         case UPDATE_QUESTION: {
             const newState = {...state, allQuestions: {...state.allQuestions}};
             newState.allQuestions[action.question.id] = action.question;
+            newState.singleQuestion = action.question;
+            return newState;
+        }
+        case DISPLAY_QUESTION: {
+            const newState = {...state, singleQuestion: {...state.singleQuestion}};
+            newState.singleQuestion = action.question;
             return newState;
         }
         default:
