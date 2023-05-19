@@ -4,6 +4,8 @@ import OpenConfirmDeleteModalButton from "../OpenConfirmDeleteModalButton";
 import OpenUpdateQuestionModalButton from "../OpenUpdateQuestionModalButton";
 import ConfirmDeleteModalButton from "../ConfirmDeleteModalButton";
 import QuestionFormModal from "../QuestionFormModal";
+import AnswerFormModal from "../AnswerFormModal";
+import OpenCreateAnswerModalButton from "../OpenCreateAnswerModalButton";
 import "./QuestionCard.css";
 
 function QuestionCard({ question }) {
@@ -37,7 +39,7 @@ function QuestionCard({ question }) {
                 Upvotes {question.upvotes}
                 Downvotes {question.downvotes}
             </div> */}
-            {userWroteQuestion() && (
+            {userWroteQuestion() ? (
                 <div className="author-options">
                     <OpenConfirmDeleteModalButton
                         buttonText="Delete"
@@ -53,7 +55,14 @@ function QuestionCard({ question }) {
                         }
                     />
                 </div>
-            )}
+            ) :
+                    <OpenCreateAnswerModalButton
+                        buttonText="Answer This Question"
+                        modalComponent={
+                            <AnswerFormModal type='create' title='Add a New Answer' />
+                        }
+                    />
+                    }
         </div>
     )
 }
