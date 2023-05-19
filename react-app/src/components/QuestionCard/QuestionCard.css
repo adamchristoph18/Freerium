@@ -17,13 +17,14 @@
 
 .question-top-line {
     display: flex;
+    flex-flow: column;
 }
 
 .question-author {
     font-size: 12px;
     font-style: italic;
     margin-left: 5px;
-    margin-top: 12px;
+    margin-bottom: 10px;
 }
 
 .question-title {

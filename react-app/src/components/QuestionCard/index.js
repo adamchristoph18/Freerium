@@ -20,7 +20,7 @@ function QuestionCard({ question }) {
                     {question.title}
                 </div>
                 <span className="question-author site-color">
-                    Posted by {userWroteQuestion() ? "you" : author.first_name}
+                    Posted by {userWroteQuestion() ? "you" : author.first_name} @ {question.created_at > question.updated_at ? question.created_at : question.updated_at}
                 </span>
             </div>
             <div className="question-context">

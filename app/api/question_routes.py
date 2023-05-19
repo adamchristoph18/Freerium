@@ -2,6 +2,7 @@ from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import db, Question, User
 from ..forms import QuestionForm
+from datetime import datetime
 
 
 question_routes = Blueprint('questions', __name__)
@@ -47,7 +48,8 @@ def add_question():
         upvotes=data['upvotes'],
         downvotes=data['downvotes'],
         user_id=data['userId'],
-        space_id=data['spaceId']
+        space_id=data['spaceId'],
+        created_at=datetime.now()
     )
 
     db.session.add(new_question)
@@ -76,6 +78,8 @@ def update_question(id):
     question.title = p['title']
     question.context = p['context']
     question.image_url = p['imageUrl']
+    question.updated_at=datetime.now()
+
 
     db.session.commit()
     return {"question": question.to_dict()}
