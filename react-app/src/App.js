@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import AllQuestions from "./components/AllQuestions";
 import QuestionShow from "./components/QuestionShow";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/questions/:questionId"><QuestionShow /></Route>
         </Switch>
       )}
+      <Footer />
     </div>
   );
 }

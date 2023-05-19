@@ -1,0 +1,25 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    position: sticky;
+    bottom: 0;
+}
+
+.site-year {
+    margin-right: 10px;
+}
+
+.my-name {
+    margin-left: 10px;
+}
+
+.name-plus-linkedin {
+    display: flex;
+}
+
+.linkedin-icon {
+    font-size: 20px;
+    margin: 17px 0 0 15px;
+}
