@@ -47,5 +47,6 @@ class Question(db.Model):
             'downvotes': self.downvotes,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
-            'user': self.user.to_dict()
+            'user': self.user.to_dict(),
+            'answers': [answer.to_dict() for answer in self.answers]
         }

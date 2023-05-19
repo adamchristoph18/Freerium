@@ -10,7 +10,7 @@ function QuestionCard({ question }) {
     const history = useHistory();
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
-
+    const answers = question.answers;
     const userWroteQuestion = () => author.id === sessionUser?.id;
 
     return (
@@ -22,6 +22,7 @@ function QuestionCard({ question }) {
                 <span className="question-author site-color">
                     Posted by {userWroteQuestion() ? "you" : author.first_name} @ {question.created_at > question.updated_at ? question.created_at : question.updated_at}
                 </span>
+                <span className="answers-to-question-line">Answers to this question so far ~ {question.answers.length}</span>
             </div>
             <div className="question-context">
                 {question.context}

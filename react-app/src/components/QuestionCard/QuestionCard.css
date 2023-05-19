@@ -24,7 +24,7 @@
     font-size: 12px;
     font-style: italic;
     margin-left: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .question-title {
@@ -33,9 +33,15 @@
     word-wrap: break-word;
 }
 
+.answers-to-question-line {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
 .question-context {
     font-size: 14px;
-    margin: 0 0 5px 5px;
+    margin: 0 0 10px 5px;
     word-wrap: break-word;
 }
 
