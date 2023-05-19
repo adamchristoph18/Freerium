@@ -133,7 +133,8 @@ function QuestionFormModal({ type, title, question }) {
                         onChange={(e) => setImageUrl(e.target.value)}
                     />
                 </label>
-                <button className="clickable submit-question site-color-b" type="submit">Add Question</button>
+                <button className="clickable submit-question site-color-b" type="submit">
+                    {type === 'create' ? "Add Question" : "Update Question"}</button>
             </form>
         </>
     )
