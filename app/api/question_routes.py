@@ -100,3 +100,14 @@ def delete_question(id):
     db.session.commit()
 
     return {'question': 'question successfully deleted.'}
+
+
+@question_routes.route('/<int:id>')
+def singe_question_get(id):
+    """
+    Route to get a single question by id
+    """
+    question = Question.query.get(id)
+    if not question:
+        {'errors': 'Question does not exist'}
+    return {'question': question.to_dict()}
