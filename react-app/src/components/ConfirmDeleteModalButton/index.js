@@ -1,10 +1,12 @@
 import { useModal } from "../../context/Modal";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteQuestionThunk } from "../../store/questions";
 import "./ConfirmDeleteModalButton.css";
 
 function ConfirmDeleteModalButton({ question }) {
     const { closeModal } = useModal();
+    const history = useHistory();
     const dispatch = useDispatch();
 
     return (
@@ -14,6 +16,7 @@ function ConfirmDeleteModalButton({ question }) {
                 className="yes-confirm clickable site-color-b"
                 onClick={() => {
                     dispatch(deleteQuestionThunk(question.id));
+                    history.push('/');
                     closeModal();
                 }}
             >

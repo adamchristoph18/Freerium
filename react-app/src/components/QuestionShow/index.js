@@ -19,10 +19,10 @@ function QuestionShow() {
     if (!questionObject) return null;
 
     return (
-        <>
+        <div className='question-show-container'>
             <QuestionCard question={questionObject} />
             <p>Hello world</p>
-        </>
+        </div>
     )
 }
 
