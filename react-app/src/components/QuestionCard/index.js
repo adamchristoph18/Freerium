@@ -1,7 +1,9 @@
 import { useHistory } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import OpenConfirmDeleteModalButton from "../OpenConfirmDeleteModalButton";
+import OpenUpdateQuestionModalButton from "../OpenUpdateQuestionModalButton";
 import ConfirmDeleteModalButton from "../ConfirmDeleteModalButton";
+import QuestionFormModal from "../QuestionFormModal";
 import "./QuestionCard.css";
 
 function QuestionCard({ question }) {
@@ -35,12 +37,21 @@ function QuestionCard({ question }) {
                 Downvotes {question.downvotes}
             </div> */}
             {userWroteQuestion() && (
-                <OpenConfirmDeleteModalButton
-                    buttonText="Delete"
-                    modalComponent={
-                        <ConfirmDeleteModalButton question={question} />
-                    }
-                />
+                <div>
+                    <OpenConfirmDeleteModalButton
+                        buttonText="Delete"
+                        modalComponent={
+                            <ConfirmDeleteModalButton question={question} />
+                        }
+                    />
+
+                    <OpenUpdateQuestionModalButton
+                        buttonText="Update"
+                        modalComponent={
+                            <QuestionFormModal type='update' title='Update this question' question={question} />
+                        }
+                    />
+                </div>
             )}
         </div>
     )
