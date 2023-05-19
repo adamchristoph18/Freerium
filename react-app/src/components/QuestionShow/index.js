@@ -21,7 +21,6 @@ function QuestionShow() {
     return (
         <div className='question-show-container'>
             <QuestionCard question={questionObject} />
-            <p>Hello world</p>
         </div>
     )
 }
