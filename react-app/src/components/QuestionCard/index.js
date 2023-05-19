@@ -38,7 +38,7 @@ function QuestionCard({ question }) {
                 Downvotes {question.downvotes}
             </div> */}
             {userWroteQuestion() && (
-                <div>
+                <div className="author-options">
                     <OpenConfirmDeleteModalButton
                         buttonText="Delete"
                         modalComponent={
