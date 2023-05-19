@@ -14,7 +14,7 @@ function QuestionShow() {
 
     useEffect(() => {
         dispatch(displayQuestionThunk(questionId));
-    }, dispatch, questionId);
+    }, [dispatch, questionId]);
 
     if (!questionObject) return null;
 

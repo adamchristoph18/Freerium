@@ -133,6 +133,7 @@ const questionsReducer = (state = initialState, action) => {
         case UPDATE_QUESTION: {
             const newState = {...state, allQuestions: {...state.allQuestions}};
             newState.allQuestions[action.question.id] = action.question;
+            newState.singleQuestion = action.question;
             return newState;
         }
         case DISPLAY_QUESTION: {
