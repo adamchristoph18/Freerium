@@ -1,6 +1,17 @@
 .question-show-container {
+    display: flex;
+}
+
+.question-show-left {
     width: 40%;
     height: 820px;
     margin-left: 25px;
-    padding-top: 40px;
+    padding-top: 100px;
+    border: 2px solid yellow;
+}
+
+.question-show-right {
+    margin-left: 20px;
+    width: 50%;
+    border: 2px solid blue;
 }
