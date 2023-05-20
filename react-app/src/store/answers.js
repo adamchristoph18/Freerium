@@ -1,13 +1,37 @@
 // Action type constants
+const GET_ALL_ANSWERS = "answers/GET_ALL_ANSWERS";
 const ADD_ANSWER = "answers/ADD_ANSWER";
+const DELETE_ANSWER = "answers/DELETE_ANSWER";
 
 // Action creators
+const getAllAnswers = (answers) => ({
+    type: GET_ALL_ANSWERS,
+    answers
+});
+
 const addAnswer = (answer) => ({
     type: ADD_ANSWER,
     answer
 });
 
+const deleteAnswer = (answerId) => ({
+    type: DELETE_ANSWER,
+    answerId
+});
+
 // Thunk Action Creators
+export const getAllAnswersThunk = () => async (dispatch) => {
+    const response = await fetch('/api/answers/all');
+
+    if (response.ok) {
+        const { answers } = await response.json();
+        dispatch(getAllAnswers(answers));
+        return answers;
+    }
+    const errors = await response.json();
+    return errors;
+}
+
 export const addNewAnswerThunk = (answer) => async (dispatch) => {
     const response = await fetch('/api/answers/new', {
         method: 'POST',
@@ -27,15 +51,36 @@ export const addNewAnswerThunk = (answer) => async (dispatch) => {
     }
 };
 
+export const deleteAnswerThunk = (answerId) => async (dispatch) => {
+    const response = await fetch(`/api/answers/${answerId}/delete`, {
+        method: "DELETE"
+    });
+    if (response.ok) {
+        dispatch(deleteAnswer(answerId));
+    }
+};
+
 
 // Answers reducer
-const initialState = { answers: {} };
+const initialState = { allAnswers: {} };
 
 const answersReducer = (state = initialState, action) => {
     switch (action.type) {
+        case GET_ALL_ANSWERS: {
+            const newState = {...state, allAnswers: {...state.allAnswers}};
+            action.answers.forEach(answer => {
+                newState.allAnswers[answer.id] = answer;
+            });
+            return newState;
+        }
         case ADD_ANSWER: {
-            const newState = {...state, answers: {...state.answers}};
-            newState.answers[action.answer.id] = action.answer;
+            const newState = {...state, allAnswers: {...state.allAnswers}};
+            newState.allAnswers[action.answer.id] = action.answer;
+            return newState;
+        }
+        case DELETE_ANSWER: {
+            const newState = {...state, allAnswers: {...state.allAnswers}};
+            delete newState.allAnswers[action.answerId];
             return newState;
         }
         default:

@@ -17,6 +17,13 @@ def validation_errors_to_error_messages(validation_errors):
             errorMessages.append(f'{field} : {error}')
     return errorMessages
 
+@answer_routes.route('/all')
+def all_answers():
+    """
+    GET all answers
+    """
+    answers = Answer.query.all()
+    return { 'answers': [answer.to_dict() for answer in answers] }
 
 @answer_routes.route('/new', methods=['POST'])
 @login_required
@@ -45,3 +52,20 @@ def add_answer():
     db.session.commit()
 
     return {"answer": new_answer.to_dict()}
+
+
+@answer_routes.route('/<int:id>/delete', methods=['DELETE'])
+@login_required
+def delete_answer(id):
+    """
+    Route to delete an answer
+    """
+    answer = Answer.query.get(id)
+
+    if not answer:
+        return {'error': 'answer not found'}
+
+    db.session.delete(answer)
+    db.session.commit()
+
+    return {'answer': 'answer successfully deleted.'}

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllQuestionsThunk } from "../../store/questions";
+import { getAllAnswersThunk } from "../../store/answers";
 import QuestionCard from "../QuestionCard";
 import "./AllQuestions.css";
 
@@ -12,7 +13,8 @@ function AllQuestions() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getAllQuestionsThunk())
+        dispatch(getAllQuestionsThunk());
+        dispatch(getAllAnswersThunk());
     }, [dispatch, questions.length]);
 
     return (
