@@ -25,7 +25,7 @@ function QuestionShow() {
             </div>
             <div className='question-show-right'>
                 {questionObject.answers.map(answer => (
-                    <AnswerCard answer={answer} key={answer.id} />
+                    <AnswerCard answer={answer} key={answer.id} questionId={questionId} />
                 ))}
             </div>
         </div>

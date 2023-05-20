@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
+import OpenConfirmDeleteModalButton from '../OpenConfirmDeleteModalButton';
+import ConfirmDeleteAnswerModalButton from '../ConfirmDeleteAnswerModalButton';
 import "./AnswerCard.css";
 
 
-function AnswerCard({ answer }) {
+function AnswerCard({ answer, questionId }) {
 	const sessionUser = useSelector(state => state.session.user);
     const author = answer.user;
 
@@ -19,6 +21,23 @@ function AnswerCard({ answer }) {
             <div className="main-answer-text">
                 {answer.body}
             </div>
+            {userWroteAnswer() && (
+                <div className="author-options">
+                    <OpenConfirmDeleteModalButton
+                        buttonText="Delete"
+                        modalComponent={
+                            <ConfirmDeleteAnswerModalButton answer={answer} questionId={questionId} />
+                        }
+                    />
+
+                    {/* <OpenUpdateQuestionModalButton
+                        buttonText="Update"
+                        modalComponent={
+                            <QuestionFormModal type='update' title='Update this question' question={question} />
+                        }
+                    /> */}
+                </div>
+            )}
         </div>
     )
 }
