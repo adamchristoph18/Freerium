@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addNewAnswerThunk } from "../../store/answers";
+import { displayQuestionThunk, getAllQuestionsThunk } from "../../store/questions";
 import { useModal } from "../../context/Modal";
 
 import "./AnswerFormModal.css";
@@ -31,6 +32,8 @@ function AnswerFormModal({ type, title, question }) {
         if (data) {
             setErrors(data);
         } else {
+            await dispatch(displayQuestionThunk(question.id));
+            await dispatch(getAllQuestionsThunk());
             closeModal();
         }
     };

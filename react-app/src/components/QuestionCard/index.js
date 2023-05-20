@@ -13,6 +13,7 @@ function QuestionCard({ question }) {
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
     const answers = question.answers;
+
     const userWroteQuestion = () => author.id === sessionUser?.id;
 
     return (

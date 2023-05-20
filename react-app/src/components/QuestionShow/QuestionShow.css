@@ -3,16 +3,16 @@
 }
 
 .question-show-left {
+    height: 800px;
     width: 60%;
-    height: 820px;
     margin-left: 25px;
-    padding-top: 100px;
+    padding-top: 60px;
     /* border: 2px solid yellow; */
 }
 
 .question-show-right {
     margin-left: 20px;
-    padding-top: 100px;
+    padding-top: 60px;
     width: 30%;
     /* border: 2px solid blue; */
 }

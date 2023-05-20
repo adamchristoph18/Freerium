@@ -29,13 +29,13 @@ export const addNewAnswerThunk = (answer) => async (dispatch) => {
 
 
 // Answers reducer
-const initialState = { singleAnswer: null };
+const initialState = { answers: {} };
 
 const answersReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_ANSWER: {
-            const newState = {...state, singleAnswer: {...state.singleAnswer}};
-            newState.singleAnswer = action.answer;
+            const newState = {...state, answers: {...state.answers}};
+            newState.answers[action.answer.id] = action.answer;
             return newState;
         }
         default:

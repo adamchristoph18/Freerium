@@ -21,3 +21,10 @@
     font-size: 14px;
     margin: 0 10px 10px 10px;
 }
+
+.answer-time {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
