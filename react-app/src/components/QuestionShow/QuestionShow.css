@@ -1,6 +1,26 @@
 .question-show-container {
-    width: 40%;
-    height: 820px;
+    display: flex;
+}
+
+.question-show-left {
+    height: 800px;
+    width: 60%;
     margin-left: 25px;
-    padding-top: 40px;
+    padding-top: 60px;
+    /* border: 2px solid yellow; */
+}
+
+.question-show-right {
+    margin-left: 20px;
+    padding-top: 60px;
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    /* border: 2px solid blue; */
+}
+
+.no-answers-yet {
+    color: white;
+    font-size: 40px;
+    font-style: italic;
 }
