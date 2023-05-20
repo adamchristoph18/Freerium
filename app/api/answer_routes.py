@@ -53,6 +53,28 @@ def add_answer():
 
     return {"answer": new_answer.to_dict()}
 
+@answer_routes.route('<int:id>/update', methods=['PUT'])
+@login_required
+def update_answer(id):
+    """
+    Route to update a single answer by id
+    """
+    form = AnswerForm()
+    # Get the csrf_token from the request cookie and put it into the
+    # form manually to validate_on_submit can be used
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    if not form.validate_on_submit():
+        return {"errors": validation_errors_to_error_messages(form.errors)}, 401
+
+    p = request.json
+    answer = Answer.query.get(id)
+
+    answer.body = p['body']
+    answer.updated_at=datetime.now()
+
+    db.session.commit()
+    return {"answer": answer.to_dict()}
 
 @answer_routes.route('/<int:id>/delete', methods=['DELETE'])
 @login_required
