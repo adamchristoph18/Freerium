@@ -53,7 +53,7 @@ def add_answer():
 
     return {"answer": new_answer.to_dict()}
 
-@answer_routes.route('<int:id>/update', methods=['PUT'])
+@answer_routes.route('/<int:id>/update', methods=['PUT'])
 @login_required
 def update_answer(id):
     """
@@ -70,7 +70,8 @@ def update_answer(id):
     p = request.json
     answer = Answer.query.get(id)
 
-    answer.body = p['body']
+
+    answer.body=p['body']
     answer.updated_at=datetime.now()
 
     db.session.commit()

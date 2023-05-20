@@ -58,6 +58,7 @@ export const addNewAnswerThunk = (answer) => async (dispatch) => {
 };
 
 export const updateAnswerThunk = (answer) => async (dispatch) => {
+    // console.log('yeet ---------------> ', answer);
     const { id, body } = answer;
     const response = await fetch(`/api/answers/${id}/update`, {
         method: 'PUT',

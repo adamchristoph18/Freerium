@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addNewAnswerThunk } from "../../store/answers";
+import { addNewAnswerThunk, updateAnswerThunk } from "../../store/answers";
 import { displayQuestionThunk, getAllQuestionsThunk } from "../../store/questions";
 import { useModal } from "../../context/Modal";
 
 import "./AnswerFormModal.css";
 
-function AnswerFormModal({ type, title, question }) {
+function AnswerFormModal({ type, title, question, answer, questionId }) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [body, setBody] = useState("");
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
+
+    useEffect(() => {
+        if (type === 'update') {
+            setBody(answer.body)
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,18 +27,25 @@ function AnswerFormModal({ type, title, question }) {
             upvotes: 0,
             downvotes: 0,
             userId: sessionUser.id,
-            questionId: question.id
+            questionId: question?.id
+        };
+
+        const updatedAnswer = {
+            id: answer?.id,
+            body
         };
 
         let data;
         if (type === 'create') {
             data = await dispatch(addNewAnswerThunk(newAnswer));
+        } else {
+            data = await dispatch(updateAnswerThunk(updatedAnswer));
         }
 
         if (data) {
             setErrors(data);
         } else {
-            await dispatch(displayQuestionThunk(question.id));
+            question ? await dispatch(displayQuestionThunk(question.id)) : await dispatch(displayQuestionThunk(questionId));
             await dispatch(getAllQuestionsThunk());
             closeModal();
         }

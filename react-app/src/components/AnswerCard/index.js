@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 import OpenConfirmDeleteModalButton from '../OpenConfirmDeleteModalButton';
+import OpenUpdateAnswerModalButton from '../OpenUpdateAnswerButton';
+import AnswerFormModal from '../AnswerFormModal';
 import ConfirmDeleteAnswerModalButton from '../ConfirmDeleteAnswerModalButton';
 import "./AnswerCard.css";
 
@@ -30,12 +32,12 @@ function AnswerCard({ answer, questionId }) {
                         }
                     />
 
-                    {/* <OpenUpdateQuestionModalButton
+                    <OpenUpdateAnswerModalButton
                         buttonText="Update"
                         modalComponent={
-                            <QuestionFormModal type='update' title='Update this question' question={question} />
+                            <AnswerFormModal type='update' title='Update this answer' answer={answer} questionId={questionId} />
                         }
-                    /> */}
+                    />
                 </div>
             )}
         </div>
