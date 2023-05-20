@@ -24,9 +24,11 @@ function QuestionShow() {
                 <QuestionCard question={questionObject} />
             </div>
             <div className='question-show-right'>
-                {questionObject.answers.map(answer => (
-                    <AnswerCard answer={answer} key={answer.id} questionId={questionId} />
-                ))}
+                {questionObject.answers.length > 0 ? (
+                    questionObject.answers.map(answer => (
+                        <AnswerCard answer={answer} key={answer.id} questionId={questionId} />
+                    ))
+                ) : <span className='no-answers-yet'>"Nobody has submitted an answer to this question yet!</span>}
             </div>
         </div>
     )

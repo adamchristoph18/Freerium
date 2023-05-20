@@ -18,3 +18,9 @@
     flex-flow: column;
     /* border: 2px solid blue; */
 }
+
+.no-answers-yet {
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+}
