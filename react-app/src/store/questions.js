@@ -46,13 +46,10 @@ export const getAllQuestionsThunk = () => async (dispatch) => {
     return errors;
 };
 
-export const addNewQuestionThunk = (question) => async (dispatch) => {
+export const addNewQuestionThunk = (formDataNew) => async (dispatch) => {
     const response = await fetch('/api/questions/new', {
         method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(question)
+        body: formDataNew
     });
 
     if (response.ok) {
@@ -65,14 +62,11 @@ export const addNewQuestionThunk = (question) => async (dispatch) => {
     }
 };
 
-export const updateQuestionThunk = (question) => async (dispatch) => {
-    const { id, title, context, imageUrl } = question;
+export const updateQuestionThunk = (payload) => async (dispatch) => {
+    const { id, formDataUpdate } = payload;
     const response = await fetch(`/api/questions/${id}/update`, {
         method: 'PUT',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ title, context, imageUrl })
+        body: formDataUpdate
     });
 
     if (response.ok) {

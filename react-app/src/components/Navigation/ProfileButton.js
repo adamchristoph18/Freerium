@@ -44,7 +44,9 @@ function ProfileButton({ user }) {
         {user ? (
           <>
             <span>Hello, {user.username}</span>
-            <span>{user.email}</span>
+            <span>{user.email}
+            <img src={user.profile_image_url} alt="" />
+            </span>
             <span>Settings</span>
             <span className="log-out clickable site-color-b" onClick={handleLogout}>Log Out</span>
           </>

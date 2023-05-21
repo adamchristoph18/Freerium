@@ -11,7 +11,9 @@ function QuestionFormModal({ type, title, question }) {
     const [questionTitle, setQuestionTitle] = useState("");
     const [space, setSpace] = useState("Miscellaneous");
     const [context, setContext] = useState("");
-    const [imageUrl, setImageUrl] = useState("");
+    // const [imageUrl, setImageUrl] = useState("");
+    const [image, setImage] = useState(null);
+	const [imageLoading, setImageLoading] = useState(false);
     const history = useHistory();
 
     const [errors, setErrors] = useState([]);
@@ -23,7 +25,7 @@ function QuestionFormModal({ type, title, question }) {
         if (type === 'update') {
             setQuestionTitle(question.title);
             setContext(question.context);
-            setImageUrl(question.image_url);
+            setImage(question.image_url);
         }
     }, []);
 
@@ -40,28 +42,50 @@ function QuestionFormModal({ type, title, question }) {
             'Miscellaneous': 7
         };
 
-        const newQuestion = {
-            title: questionTitle,
-            context,
-            imageUrl,
-            upvotes: 0,
-            downvotes: 0,
-            userId: sessionUser.id,
-            spaceId: spacesObj[space]
-        };
+        // const newQuestion = {
+        //     title: questionTitle,
+        //     context,
+        //     imageUrl,
+        //     upvotes: 0,
+        //     downvotes: 0,
+        //     userId: sessionUser.id,
+        //     spaceId: spacesObj[space]
+        // };
 
-        const updatedQuestion = {
-            id: question?.id,
-            title: questionTitle,
-            context,
-            imageUrl
-        };
+		const formDataNew = new FormData();
+        formDataNew.append("title", questionTitle);
+        formDataNew.append("context", context);
+        formDataNew.append("image", image);
+        formDataNew.append("upvotes", 0);
+        formDataNew.append("downvotes", 0);
+        formDataNew.append("userId", sessionUser.id);
+        formDataNew.append("spaceId", spacesObj[space]);
+
+
+        // const updatedQuestion = {
+        //     id: question?.id,
+        //     title: questionTitle,
+        //     context,
+        //     imageUrl
+        // };
+
+        const formDataUpdate = new FormData();
+        formDataUpdate.append("title", questionTitle);
+        formDataUpdate.append("context", context);
+        formDataUpdate.append("image", image);
+
+        // aws uploads can be a bit slow—displaying
+		// some sort of loading message is a good idea
+		setImageLoading(true);
 
         let data;
         if (type === "create") {
-            data = await dispatch(addNewQuestionThunk(newQuestion));
+            data = await dispatch(addNewQuestionThunk(formDataNew));
         } else {
-            data = await dispatch(updateQuestionThunk(updatedQuestion));
+            data = await dispatch(updateQuestionThunk({
+                id: question?.id,
+                formDataUpdate
+            }));
         }
 
         if (data) {
@@ -127,13 +151,15 @@ function QuestionFormModal({ type, title, question }) {
                 <label className="modal-input-label">
                     Image URL (Optional)
                     <input
-                        type="text"
                         placeholder="Image URL to support your question"
                         className="modal-input"
                         name='questionTitle'
-                        value={imageUrl}
-                        onChange={(e) => setImageUrl(e.target.value)}
+                        type="file"
+						accept="image/*"
+						onChange={(e) => setImage(e.target.files[0])}
                     />
+                <br/>
+                <img style={{width: "100px", paddingLeft: "10px"}} src={image} alt="" />
                 </label>
                 <button className="clickable submit-question site-color-b" type="submit">
                     {type === 'create' ? "Add Question" : "Update Question"}</button>
