@@ -36,7 +36,7 @@ function ProfileButton({ user }) {
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
   const closeMenu = () => setShowMenu(false);
-  console.log(user)
+  // console.log(user)
   return (
     <>
       <i onClick={openMenu} className="fas fa-user-circle clickable profile-icon" />
@@ -45,9 +45,8 @@ function ProfileButton({ user }) {
           <>
             <span>Hello, {user.username}</span>
             <span>{user.email}
-            <img src={user.profile_image_url} alt="" />
+            <img className="user-img" src={user.profile_image_url} alt="" />
             </span>
-            <span>Settings</span>
             <span className="log-out clickable site-color-b" onClick={handleLogout}>Log Out</span>
           </>
         ) : (

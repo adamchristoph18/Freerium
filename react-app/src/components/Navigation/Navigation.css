@@ -28,9 +28,10 @@
 }
 
 .profile-dropdown {
-  position: fixed;
+  position: absolute;
+  /* margin-top: 400px; */
   top: 60px;
-  right: 80px;
+  right: 150px;
   width: 250px;
   display: flex;
   align-items: center;
@@ -40,13 +41,16 @@
   border: 2px solid green;
 }
 
+.user-img {
+  width: 250px;
+}
+
 .hidden {
   display: none;
 }
 
-
 .profile-icon {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 70%;
   font-size: 25px;

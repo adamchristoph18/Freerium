@@ -3,6 +3,7 @@
         "username": "Demo",
         "first_name": "Nelson",
         "last_name": "Burchen",
+        "profile_image_url": "https://freerium-image-uploads.s3.us-east-2.amazonaws.com/test-image.png",
         "email": "demo@aa.io",
         "password": "password"
     },
