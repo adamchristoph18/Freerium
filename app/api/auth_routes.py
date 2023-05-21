@@ -3,6 +3,8 @@ from app.models import User, db
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
+from app.api.aws_helpers import (
+    upload_file_to_s3, get_unique_filename)
 
 auth_routes = Blueprint('auth', __name__)
 
@@ -54,6 +56,7 @@ def logout():
     return {'message': 'User logged out'}
 
 
+
 @auth_routes.route('/signup', methods=['POST'])
 def sign_up():
     """
@@ -62,14 +65,25 @@ def sign_up():
     form = SignUpForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
+
         user = User(
             username=form.data['username'],
             email=form.data['email'],
             password=form.data['password'],
             first_name=form.data['firstName'],
             last_name=form.data['lastName'],
-            profile_image_url=form.data['profileImageUrl'] if form.data['profileImageUrl'] else '../test-image.png'
         )
+
+        if form.data['image']:
+            profile_image=form.data['image']
+            profile_image.filename=get_unique_filename(profile_image.filename)
+            upload=upload_file_to_s3(profile_image)
+
+            if "url" not in upload:
+                return upload
+
+            user.profile_image_url=upload['url']
+
         db.session.add(user)
         db.session.commit()
         login_user(user)

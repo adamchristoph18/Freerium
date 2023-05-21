@@ -11,15 +11,28 @@ function SignupFormModal() {
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [profileImageUrl, setProfileImageUrl] = useState("");
+	// const [profileImageUrl, setProfileImageUrl] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const [image, setImage] = useState(null);
+	const [imageLoading, setImageLoading] = useState(false);
 	const [errors, setErrors] = useState([]);
 	const { closeModal } = useModal();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		const formData = new FormData();
+        formData.append("firstName", firstName);
+        formData.append("lastName", lastName);
+        formData.append("email", email);
+        formData.append("username", username);
+        formData.append("image", image);
+        formData.append("password", password);
+
 		if (password === confirmPassword) {
-			const data = await dispatch(signUp(username, email, password, firstName, lastName, profileImageUrl));
+			// aws uploads can be a bit slow—displaying
+			// some sort of loading message is a good idea
+			setImageLoading(true);
+			const data = await dispatch(signUp(formData));
 			if (data) {
 				setErrors(data);
 			} else {
@@ -86,11 +99,11 @@ function SignupFormModal() {
 				<label className="modal-input-label">
 					Profile Image URL (optional)
 					<input
-						type="text"
 						placeholder="image URL here"
 						className="modal-input"
-						value={profileImageUrl}
-						onChange={(e) => setProfileImageUrl(e.target.value)}
+						type="file"
+						accept="image/*"
+						onChange={(e) => setImage(e.target.files[0])}
 					/>
 				</label>
 				<label className="modal-input-label">
@@ -114,6 +127,7 @@ function SignupFormModal() {
 					/>
 				</label>
 				<button className="sign-up-button" type="submit">Sign Up</button>
+				{(imageLoading)&& <p>Loading...</p>}
 			</form>
 		</>
 	);
