@@ -3,7 +3,8 @@ from flask_login import login_required, current_user
 from app.models import db, Question, User, Answer
 from ..forms import QuestionForm
 from datetime import datetime
-
+from app.api.aws_helpers import (
+    upload_file_to_s3, get_unique_filename)
 
 question_routes = Blueprint('questions', __name__)
 
@@ -44,13 +45,23 @@ def add_question():
     new_question = Question(
         title=data['title'],
         context=data['context'],
-        image_url=data['imageUrl'],
+        # image_url=data['imageUrl'],
         upvotes=data['upvotes'],
         downvotes=data['downvotes'],
         user_id=data['userId'],
         space_id=data['spaceId'],
         created_at=datetime.now()
     )
+
+    if data['image']:
+        question_image=form.data['image']
+        question_image.filename=get_unique_filename(question_image.filename)
+        upload=upload_file_to_s3(question_image)
+
+        if "url" not in upload:
+                return upload
+
+        new_question.image_url=upload['url']
 
     db.session.add(new_question)
     db.session.commit()
@@ -72,13 +83,23 @@ def update_question(id):
     if not form.validate_on_submit():
         return {"errors": validation_errors_to_error_messages(form.errors)}, 401
 
-    p = request.json
+    data = form.data
     question = Question.query.get(id)
 
-    question.title = p['title']
-    question.context = p['context']
-    question.image_url = p['imageUrl']
+    question.title = data['title']
+    question.context = data['context']
+    # question.image_url = data['imageUrl']
     question.updated_at=datetime.now()
+
+    if data['image']:
+        question_image=form.data['image']
+        question_image.filename=get_unique_filename(question_image.filename)
+        upload=upload_file_to_s3(question_image)
+
+        if "url" not in upload:
+                return upload
+
+        question.image_url=upload['url']
 
 
     db.session.commit()
