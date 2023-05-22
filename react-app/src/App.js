@@ -28,17 +28,16 @@ function App() {
                 <Route exact path="/"><AllQuestions /></Route>
                 <Route path="/questions/:questionId"><QuestionShow /></Route>
               </Switch>
+              <Footer />
             </>
           ) : (
             <>
-              <Navigation isLoaded={isLoaded} />
               <SplashPage />
             </>
           )
         }
       </>
       )}
-      <Footer />
     </div>
   );
 }

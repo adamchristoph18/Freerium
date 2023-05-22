@@ -1,5 +1,5 @@
 .splash-page {
-    height: 850px;
+    height: 100vh;
     display: flex;
 }
 
@@ -38,6 +38,6 @@
 }
 
 .site-tag-line {
-    margin: 30px 0 0 150px;
+    margin: 30px 5px 0 150px;
     /* border: 1px solid black; */
 }
