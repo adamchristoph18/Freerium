@@ -13,7 +13,6 @@ function Navigation({ isLoaded }){
 		<div className='navigation-bar'>
 			<div>
 				<NavLink exact to='/' className='site-color freerium-title'>Freerium</NavLink>
-				{/* <i className="fa-sharp fa-solid fa-house house-icon site-color clickable" /> */}
 			</div>
 			{isLoaded && (
 				<div>

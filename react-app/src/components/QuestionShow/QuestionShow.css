@@ -12,7 +12,7 @@
 
 .question-show-right {
     margin-left: 20px;
-    padding-top: 60px;
+    padding-top: 65px;
     width: 30%;
     display: flex;
     flex-flow: column;
@@ -21,6 +21,6 @@
 
 .no-answers-yet {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
 }
