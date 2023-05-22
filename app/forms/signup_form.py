@@ -30,8 +30,8 @@ def valid_email(form, field):
         raise ValidationError('Please provide a valid email address.')
 
 class SignUpForm(FlaskForm):
-    firstName = StringField('firstName', validators=[DataRequired()])
-    lastName = StringField('lastName', validators=[DataRequired()])
+    firstName = StringField('firstName', validators=[DataRequired(), Length(1, 40)])
+    lastName = StringField('lastName', validators=[DataRequired(), Length(1, 40)])
     username = StringField('username', validators=[DataRequired(), username_exists, Length(3, 20)])
     email = StringField('email', validators=[DataRequired(), user_exists, valid_email])
     # profileImageUrl = StringField('profileImageUrl')

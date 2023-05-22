@@ -14,19 +14,19 @@ function Navigation({ isLoaded }){
 			<div>
 				<NavLink exact to='/' className='site-color freerium-title'>Freerium</NavLink>
 			</div>
-			{isLoaded && (
-				<div>
-					<ProfileButton user={sessionUser} />
+			{isLoaded && sessionUser && (
+				<div className='navigation-bar-right'>
+					<p className='logged-in-as'>Logged in as {sessionUser.first_name}</p>
+					<div className='profile-icon-button'>
+						<ProfileButton user={sessionUser} />
+					</div>
+					<OpenCreateQuestionModalButton
+						buttonText="Add question"
+						modalComponent={
+							<QuestionFormModal type='create' title='Add a new question' />
+						}
+					/>
 				</div>
-			)}
-
-			{sessionUser && (
-				<OpenCreateQuestionModalButton
-					buttonText="Add question"
-					modalComponent={
-						<QuestionFormModal type='create' title='Add a new question' />
-					}
-				/>
 			)}
 
 		</div>

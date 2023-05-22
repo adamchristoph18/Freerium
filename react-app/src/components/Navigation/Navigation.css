@@ -6,6 +6,25 @@
   background-color: white;
   position: sticky;
   top: 0;
+  /* border: 2px solid black; */
+}
+
+.logged-in-as {
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.navigation-bar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.profile-icon-button {
+  /* border: 2px solid green; */
+  margin-right: 40px;
 }
 
 .freerium-title {
@@ -13,11 +32,7 @@
   font-size: 30px;
   text-decoration: none;
   margin-left: 10px;
-}
-
-.house-icon {
-  font-size: 30px;
-  margin-left: 25px;
+  /* border: 2px solid black; */
 }
 
 .log-out {
@@ -42,7 +57,9 @@
 }
 
 .user-img {
-  width: 250px;
+  width: 50px;
+  /* height: 40px; */
+  border-radius: 70%;
 }
 
 .hidden {
