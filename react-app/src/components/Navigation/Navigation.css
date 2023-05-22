@@ -13,18 +13,34 @@
   font-size: 13px;
   font-style: italic;
   margin-right: 10px;
+  margin-top: 0px;
+  /* border: 2px solid black; */
+}
+
+.user-page-link {
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: -10px;
+  /* border: 2px solid black; */
 }
 
 .navigation-bar-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+}
+
+.user-greeting-plus-profile-link {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  /* border: 1px solid green; */
 }
 
 .profile-icon-button {
+  margin-right: 25px;
   /* border: 2px solid green; */
-  margin-right: 40px;
 }
 
 .freerium-title {

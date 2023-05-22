@@ -16,7 +16,12 @@ function Navigation({ isLoaded }){
 			</div>
 			{isLoaded && sessionUser && (
 				<div className='navigation-bar-right'>
-					<p className='logged-in-as'>Logged in as {sessionUser.first_name}</p>
+					<div className='user-greeting-plus-profile-link'>
+						<p className='logged-in-as'>Logged in as {sessionUser.first_name}</p>
+						<NavLink exact to='/' className="user-page-link">
+							Go to user page
+						</NavLink>
+					</div>
 					<div className='profile-icon-button'>
 						<ProfileButton user={sessionUser} />
 					</div>
