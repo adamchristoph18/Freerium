@@ -6,6 +6,42 @@
   background-color: white;
   position: sticky;
   top: 0;
+  z-index: 1000;
+  /* border: 2px solid black; */
+}
+
+.logged-in-as {
+  font-size: 13px;
+  font-style: italic;
+  margin-right: 10px;
+  margin-top: 0px;
+  /* border: 2px solid black; */
+}
+
+.user-page-link {
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: -10px;
+  /* border: 2px solid black; */
+}
+
+.navigation-bar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.user-greeting-plus-profile-link {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  /* border: 1px solid green; */
+}
+
+.profile-icon-button {
+  margin-right: 25px;
+  /* border: 2px solid green; */
 }
 
 .freerium-title {
@@ -13,11 +49,7 @@
   font-size: 30px;
   text-decoration: none;
   margin-left: 10px;
-}
-
-.house-icon {
-  font-size: 30px;
-  margin-left: 25px;
+  /* border: 2px solid black; */
 }
 
 .log-out {
@@ -28,25 +60,31 @@
 }
 
 .profile-dropdown {
-  position: fixed;
+  position: absolute;
+  /* margin-top: 400px; */
   top: 60px;
-  right: 80px;
+  right: 150px;
   width: 250px;
   display: flex;
   align-items: center;
   flex-flow: column;
   justify-content: space-between;
   background-color: white;
-  border: 2px solid green;
+  /* border: 2px solid green; */
+}
+
+.user-img {
+  width: 50px;
+  /* height: 40px; */
+  border-radius: 70%;
 }
 
 .hidden {
   display: none;
 }
 
-
 .profile-icon {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 70%;
   font-size: 25px;

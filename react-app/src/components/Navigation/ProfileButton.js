@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
-import OpenModalButton from "../OpenModalButton";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
+// import OpenModalButton from "../OpenModalButton";
+// import LoginFormModal from "../LoginFormModal";
+// import SignupFormModal from "../SignupFormModal";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -36,35 +36,20 @@ function ProfileButton({ user }) {
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
   const closeMenu = () => setShowMenu(false);
-  console.log(user)
+
   return (
     <>
-      <i onClick={openMenu} className="fas fa-user-circle clickable profile-icon" />
+      {/* <i onClick={openMenu} className="fas fa-user-circle clickable profile-icon" /> */}
+      <img onClick={openMenu} className="user-img clickable" src={user.profile_image_url} alt="" />
       <div className={ulClassName} ref={ulRef}>
         {user ? (
           <>
             <span>Hello, {user.username}</span>
             <span>{user.email}
-            <img src={user.profile_image_url} alt="" />
             </span>
-            <span>Settings</span>
             <span className="log-out clickable site-color-b" onClick={handleLogout}>Log Out</span>
           </>
-        ) : (
-          <>
-            <OpenModalButton
-              buttonText="Log In"
-              onItemClick={closeMenu}
-              modalComponent={<LoginFormModal />}
-            />
-
-            <OpenModalButton
-              buttonText="Sign Up"
-              onItemClick={closeMenu}
-              modalComponent={<SignupFormModal />}
-            />
-          </>
-        )}
+        ) : null}
       </div>
     </>
   );

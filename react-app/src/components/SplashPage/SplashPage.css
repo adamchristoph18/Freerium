@@ -1,0 +1,43 @@
+.splash-page {
+    height: 100vh;
+    display: flex;
+}
+
+.splash-page-left {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: white;
+    /* border: 3px solid yellow; */
+}
+
+.left-side-content {
+    margin-bottom: 90px;
+    /* border: 2px solid blue; */
+}
+
+.splash-page-right {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.welcome-to {
+    width: fit-content;
+    margin: 0 0 0 150px;
+    /* border: 1px solid blue; */
+}
+
+.freerium-splash-page {
+    width: fit-content;
+    margin: 0 0 0 150px;
+    /* border: 1px solid black; */
+}
+
+.site-tag-line {
+    margin: 30px 5px 0 150px;
+    /* border: 1px solid black; */
+}

@@ -28,7 +28,7 @@ function QuestionShow() {
                     questionObject.answers.map(answer => (
                         <AnswerCard answer={answer} key={answer.id} questionId={questionId} />
                     ))
-                ) : <span className='no-answers-yet'>"Nobody has submitted an answer to this question yet!</span>}
+                ) : <span className='no-answers-yet'>Nobody has submitted an answer to this question yet!</span>}
             </div>
         </div>
     )
