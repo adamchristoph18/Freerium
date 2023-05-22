@@ -38,7 +38,7 @@
   flex-flow: column;
   justify-content: space-between;
   background-color: white;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .user-img {

@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
+// import LoginFormModal from "../LoginFormModal";
+// import SignupFormModal from "../SignupFormModal";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -49,21 +49,23 @@ function ProfileButton({ user }) {
             </span>
             <span className="log-out clickable site-color-b" onClick={handleLogout}>Log Out</span>
           </>
-        ) : (
-          <>
-            <OpenModalButton
-              buttonText="Log In"
-              onItemClick={closeMenu}
-              modalComponent={<LoginFormModal />}
-            />
+        ) : null
+        // (
+        //   <>
+        //     <OpenModalButton
+        //       buttonText="Log In"
+        //       onItemClick={closeMenu}
+        //       modalComponent={<LoginFormModal />}
+        //     />
 
-            <OpenModalButton
-              buttonText="Sign Up"
-              onItemClick={closeMenu}
-              modalComponent={<SignupFormModal />}
-            />
-          </>
-        )}
+        //     <OpenModalButton
+        //       buttonText="Sign Up"
+        //       onItemClick={closeMenu}
+        //       modalComponent={<SignupFormModal />}
+        //     />
+        //   </>
+        // )
+        }
       </div>
     </>
   );
