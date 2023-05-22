@@ -16,7 +16,7 @@ function OpenModalButton({
   };
 
   return (
-    <button className='clickable' onClick={onClick}>{buttonText}</button>
+    <button className='add-answer-button clickable' onClick={onClick}>{buttonText}</button>
   );
 }
 
