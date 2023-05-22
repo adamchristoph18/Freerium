@@ -46,4 +46,6 @@ class User(db.Model, UserMixin):
             'profile_image_url': self.profile_image_url,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
+            'questions': [question.to_dict_no_user() for question in self.questions],
+            'answers': [answer.to_dict_no_user() for answer in self.answers]
         }

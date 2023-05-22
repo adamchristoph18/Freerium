@@ -12,8 +12,8 @@ function UserProfilePage({ user }) {
                     <p className="user-detail">Name: {user.first_name} {user.last_name}</p>
                     <p className="user-detail">Username: {user.username}</p>
                     <p className="user-detail">Account was last updated: {user.created_at}</p>
-                    <p className="user-detail">Number of questions: </p>
-                    <p className="user-detail">Number of answers: </p>
+                    <p className="user-detail">Number of questions: {user.questions.length}</p>
+                    <p className="user-detail">Number of answers: {user.answers.length}</p>
                 </div>
             </div>
         </div>
