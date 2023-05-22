@@ -14,6 +14,8 @@
 
 .splash-page-right {
     width: 40%;
+    display: flex;
+    flex-flow: column;
     /* border: 2px solid red; */
 }
 
