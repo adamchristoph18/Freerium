@@ -60,7 +60,7 @@ function LoginFormModal() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button className="login-button clickable" type="submit">Log In</button>
+        <button className="login-button site-color-b clickable" type="submit">Log In</button>
       </form>
       <div className="demo-user-link clickable site-color" onClick={demoUser}>
         Log in as a demo user instead!</div>

@@ -126,8 +126,8 @@ function SignupFormModal() {
 						onChange={(e) => setConfirmPassword(e.target.value)}
 					/>
 				</label>
-				<button className="sign-up-button" type="submit">Sign Up</button>
-				{(imageLoading)&& <p>Loading...</p>}
+				<button className="sign-up-button site-color-b clickable" type="submit">Sign Up</button>
+				{imageLoading && <p className="loading-p">Loading...</p>}
 			</form>
 		</>
 	);

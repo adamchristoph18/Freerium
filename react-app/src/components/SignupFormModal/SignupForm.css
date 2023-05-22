@@ -1,3 +1,16 @@
 .sign-up-button {
-    margin: 10px 0 15px 120px;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    width: 150px;
+    margin: 10px 0 15px 80px;
+}
+
+.sign-up-button:hover {
+    box-shadow: 3px 3px 2px rgba(128, 128, 128, .3);
+    transition: ease-in .15s;
+}
+
+.loading-p {
+    margin-left: 10px;
 }
