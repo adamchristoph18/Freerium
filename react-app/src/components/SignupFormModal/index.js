@@ -25,13 +25,17 @@ function SignupFormModal() {
         formData.append("lastName", lastName);
         formData.append("email", email);
         formData.append("username", username);
-        formData.append("image", image);
+
+		if (image) {
+			setImageLoading(true);
+			formData.append("image", image);
+		}
+
         formData.append("password", password);
 
 		if (password === confirmPassword) {
 			// aws uploads can be a bit slow—displaying
 			// some sort of loading message is a good idea
-			setImageLoading(true);
 			const data = await dispatch(signUp(formData));
 			if (data) {
 				setErrors(data);
