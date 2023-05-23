@@ -5,6 +5,7 @@ import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
 import QuestionCard from "../QuestionCard";
 import AnswerCard from "../AnswerCard";
+import NothingToShow from "../NothingToShow";
 
 import "./UserProfilePage.css";
 
@@ -70,25 +71,13 @@ function UserProfilePage({ user }) {
                         myQuestions.map(q => (
                             <QuestionCard question={q} key={q.id} />
                         ))
-                    ) : (
-                        <div className="no-info-container">
-                            <div>There is no information to show here.</div>
-                            <div>Return to the homepage to start interacting with the Freerium community!</div>
-                            <button className="go-to-home clickable" onClick={() => {history.push('/')}}>Go to home</button>
-                        </div>
-                    )
+                    ) : ( <NothingToShow /> )
                 ) : (
                     myAnswers.length > 0 ? (
                         myAnswers.map(a => (
                             <AnswerCard answer={a} questionId={a.question.id} key={a.id} />
                         ))
-                    ) : (
-                        <div className="no-info-container">
-                            <div>There is no information to show here.</div>
-                            <div>Return to the homepage to start interacting with the Freerium community!</div>
-                            <button className="go-to-home clickable" onClick={() => {history.push('/')}}>Go to home</button>
-                        </div>
-                    )
+                    ) : ( <NothingToShow /> )
                 )}
             </div>
         </div>
