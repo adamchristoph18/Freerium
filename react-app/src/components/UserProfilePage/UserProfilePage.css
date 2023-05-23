@@ -48,6 +48,19 @@
     /* border: 2px solid white; */
 }
 
+.your-toggle-option:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* .your-toggle-option-clicked {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 26px;
+    color: white;
+} */
+
 .toggle-left {
     border-right: 2px solid white;
 }

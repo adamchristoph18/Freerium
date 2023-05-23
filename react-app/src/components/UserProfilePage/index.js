@@ -27,6 +27,8 @@ function UserProfilePage({ user }) {
 
     const dispatch = useDispatch();
 
+    // const toggleClassName = (showQuestions ? " white-cloud" : "")
+
     useEffect(() => {
         dispatch(getAllQuestionsThunk());
         dispatch(getAllAnswersThunk());
