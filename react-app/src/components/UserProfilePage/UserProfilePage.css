@@ -29,3 +29,26 @@
 .user-detail {
     margin-left: 20px;
 }
+
+.toggle-divs {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* border: 2px solid yellow; */
+}
+
+.your-toggle-option {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 26px;
+    /* border: 2px solid white; */
+}
+
+.toggle-left {
+    border-right: 2px solid white;
+}
+
+.questions-answers-container {
+    /* border: 2px solid black; */
+    padding: 10px;
+}

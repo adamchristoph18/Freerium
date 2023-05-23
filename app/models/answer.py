@@ -40,7 +40,8 @@ class Answer(db.Model):
             'downvotes': self.downvotes,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
-            'user': self.user.to_dict()
+            'user': self.user.to_dict(),
+            # 'question': self.question.to_dict()
         }
 
     def to_dict_no_user(self):

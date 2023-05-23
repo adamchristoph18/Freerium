@@ -1,11 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
+import QuestionCard from "../QuestionCard";
+import AnswerCard from "../AnswerCard";
 
 import "./UserProfilePage.css";
 
 function UserProfilePage({ user }) {
+    const [showQuestions, setShowQuestions] = useState(true);
+    const [showAnswers, setShowAnswers] = useState(false);
+    // const [showSpaces, setShowSpaces] = useState(false);
+
     const questionsObject = useSelector(state => state.questions.allQuestions);
     const answersObject = useSelector(state => state.answers.allAnswers);
 
@@ -22,6 +28,20 @@ function UserProfilePage({ user }) {
         dispatch(getAllAnswersThunk());
     }, [dispatch, myQuestions.length, myAnswers.length]);
 
+    const myQuestionsClick = (e) => {
+        e.preventDefault();
+        setShowQuestions(true);
+        setShowAnswers(false);
+        return;
+    };
+
+    const myAnswersClick = (e) => {
+        e.preventDefault();
+        setShowQuestions(false);
+        setShowAnswers(true);
+        return;
+    };
+
     return (
         <div>
             <div className="user-profile-top">
@@ -34,6 +54,23 @@ function UserProfilePage({ user }) {
                     <p className="user-detail">Number of questions: {myQuestions.length}</p>
                     <p className="user-detail">Number of answers: {myAnswers.length}</p>
                 </div>
+            </div>
+            <div className="toggle-divs">
+                <div className="your-toggle-option toggle-left clickable" onClick={myQuestionsClick}>
+                    Your Questions</div>
+                <div className="your-toggle-option clickable" onClick={myAnswersClick}>
+                    Your Answers</div>
+            </div>
+            <div className="questions-answers-container">
+                {showQuestions ? (
+                    myQuestions.map(q => (
+                        <QuestionCard question={q} key={q.id} />
+                    ))
+                ) : (
+                    myAnswers.map(a => (
+                        <AnswerCard answer={a} key={a.id} />
+                    ))
+                )}
             </div>
         </div>
     )
