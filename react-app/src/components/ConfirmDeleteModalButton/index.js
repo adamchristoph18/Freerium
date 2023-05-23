@@ -1,5 +1,5 @@
 import { useModal } from "../../context/Modal";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteQuestionThunk } from "../../store/questions";
 import "./ConfirmDeleteModalButton.css";
@@ -7,6 +7,7 @@ import "./ConfirmDeleteModalButton.css";
 function ConfirmDeleteModalButton({ question }) {
     const { closeModal } = useModal();
     const history = useHistory();
+    const location = useLocation();
     const dispatch = useDispatch();
 
     return (
@@ -16,7 +17,9 @@ function ConfirmDeleteModalButton({ question }) {
                 className="yes-confirm clickable site-color-b"
                 onClick={() => {
                     dispatch(deleteQuestionThunk(question.id));
-                    history.push('/');
+                    if (location.pathname !== '/profile') {
+                        history.push('/');
+                    }
                     closeModal();
                 }}
             >
