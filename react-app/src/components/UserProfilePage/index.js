@@ -68,7 +68,7 @@ function UserProfilePage({ user }) {
                     ))
                 ) : (
                     myAnswers.map(a => (
-                        <AnswerCard answer={a} key={a.id} />
+                        <AnswerCard answer={a} questionId={a.question.id} key={a.id} />
                     ))
                 )}
             </div>
