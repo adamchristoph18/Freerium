@@ -10,6 +10,11 @@
   /* border: 2px solid black; */
 }
 
+.site-logo {
+  height: 40px;
+  margin-left: 5px;
+}
+
 .logged-in-as {
   font-size: 13px;
   font-style: italic;

@@ -41,3 +41,12 @@
     margin: 30px 10px 0 150px;
     /* border: 1px solid black; */
 }
+
+.freerium-plus-logo {
+    display: flex;
+}
+
+.site-logo-splash {
+    margin-left: 10px;
+    /* border: 2px solid red; */
+}

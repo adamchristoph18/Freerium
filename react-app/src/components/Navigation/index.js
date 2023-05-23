@@ -14,6 +14,10 @@ function Navigation({ isLoaded }){
 		<div className='navigation-bar'>
 			<div>
 				<NavLink exact to='/' className='site-color freerium-title'>Freerium</NavLink>
+				<img
+					className='site-logo'
+					src="./apple-touch-icon.png"
+					alt='freerium-logo'/>
 			</div>
 			{isLoaded && sessionUser && (
 				<div className='navigation-bar-right'>
