@@ -84,6 +84,9 @@ def sign_up():
 
             user.profile_image_url=upload['url']
 
+        else:
+            user.profile_image_url='../default-profile-image.png'
+
         db.session.add(user)
         db.session.commit()
         login_user(user)
