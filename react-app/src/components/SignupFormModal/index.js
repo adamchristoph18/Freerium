@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
@@ -6,12 +7,12 @@ import "./SignupForm.css";
 
 function SignupFormModal() {
 	const dispatch = useDispatch();
+    const history = useHistory();
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	// const [profileImageUrl, setProfileImageUrl] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [image, setImage] = useState(null);
 	const [imageLoading, setImageLoading] = useState(false);
@@ -41,6 +42,7 @@ function SignupFormModal() {
 				setErrors(data);
 			} else {
 				closeModal();
+				history.push('/');
 			}
 		} else {
 			setErrors([
