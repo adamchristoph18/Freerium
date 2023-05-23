@@ -1,9 +1,9 @@
 [
     {
-        "username": "Demo",
-        "first_name": "Nelson",
-        "last_name": "Burchen",
-        "profile_image_url": "https://freerium-image-uploads.s3.us-east-2.amazonaws.com/test-image.png",
+        "username": "Demo2023",
+        "first_name": "Demo",
+        "last_name": "Account",
+        "profile_image_url": "https://freerium-image-uploads.s3.us-east-2.amazonaws.com/Default-Profile-Image.png",
         "email": "demo@aa.io",
         "password": "password"
     },

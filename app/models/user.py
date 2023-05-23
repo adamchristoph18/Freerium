@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String(40), nullable=False)
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
-    profile_image_url = db.Column(db.String(500), default="https://freerium-image-uploads.s3.us-east-2.amazonaws.com/test-image.png")
+    profile_image_url = db.Column(db.String(500), default="https://freerium-image-uploads.s3.us-east-2.amazonaws.com/Default-Profile-Image.png")
     hashed_password = db.Column(db.String(255), nullable=False)
 
     created_at = db.Column(db.DateTime, default=datetime.now())
