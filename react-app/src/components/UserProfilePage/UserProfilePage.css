@@ -1,6 +1,6 @@
-/* .user-profile-page {
-    height: 100vh;
-} */
+.user-profile-page {
+    min-height: 100vh;
+}
 
 .user-profile-top {
     display: flex;
@@ -52,14 +52,6 @@
     color: white;
     text-decoration: underline;
 }
-
-/* .your-toggle-option-clicked {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    font-size: 26px;
-    color: white;
-} */
 
 .toggle-left {
     border-right: 2px solid white;
