@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
@@ -11,6 +12,8 @@ function UserProfilePage({ user }) {
     const [showQuestions, setShowQuestions] = useState(true);
     const [showAnswers, setShowAnswers] = useState(false);
     // const [showSpaces, setShowSpaces] = useState(false);
+
+    const history = useHistory();
 
     const questionsObject = useSelector(state => state.questions.allQuestions);
     const answersObject = useSelector(state => state.answers.allAnswers);
@@ -43,7 +46,7 @@ function UserProfilePage({ user }) {
     };
 
     return (
-        <div>
+        <div className="user-profile-page">
             <div className="user-profile-top">
                 <img className="user-img-profile-page" src={user.profile_image_url} alt="" />
                 <div className="user-info-card">
@@ -63,13 +66,29 @@ function UserProfilePage({ user }) {
             </div>
             <div className="questions-answers-container">
                 {showQuestions ? (
-                    myQuestions.map(q => (
-                        <QuestionCard question={q} key={q.id} />
-                    ))
+                    myQuestions.length > 0 ? (
+                        myQuestions.map(q => (
+                            <QuestionCard question={q} key={q.id} />
+                        ))
+                    ) : (
+                        <div className="no-info-container">
+                            <div>There is no information to show here.</div>
+                            <div>Return to the homepage to start interacting with the Freerium community!</div>
+                            <button className="go-to-home clickable" onClick={() => {history.push('/')}}>Go to home</button>
+                        </div>
+                    )
                 ) : (
-                    myAnswers.map(a => (
-                        <AnswerCard answer={a} questionId={a.question.id} key={a.id} />
-                    ))
+                    myAnswers.length > 0 ? (
+                        myAnswers.map(a => (
+                            <AnswerCard answer={a} questionId={a.question.id} key={a.id} />
+                        ))
+                    ) : (
+                        <div className="no-info-container">
+                            <div>There is no information to show here.</div>
+                            <div>Return to the homepage to start interacting with the Freerium community!</div>
+                            <button className="go-to-home clickable" onClick={() => {history.push('/')}}>Go to home</button>
+                        </div>
+                    )
                 )}
             </div>
         </div>
