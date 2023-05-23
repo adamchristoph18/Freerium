@@ -1,6 +1,6 @@
 [
     {
-        "user_id": 5,
+        "user_id": 1,
         "space_id": 1,
         "title": "New Apple Watch",
         "context": "My brother just got me an Apple Watch for my birthday. It's a great gift, and I'm extremely grateful. The issue is that I've never seen myself with a smart watch, but I know it can be helpful for health purposes. What should I do first with it, and what apps should I sync with it from my iPhone?",
@@ -9,7 +9,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 19,
+        "user_id": 1,
         "space_id": 1,
         "title": "Peloton Update",
         "context": "I have had a Peloton for years with my spouse. We have enjoyed using it as a means for our exercise, and it's really convenient to have at the house. We noticed that there are constant software updates it seems. How often should we actually update our Peloton?",
@@ -27,7 +27,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 18,
+        "user_id": 1,
         "space_id": 1,
         "title": "iPhone Apps",
         "context": "I have had an iPhone for as long as I can remember. I haven't always been the person with a lot of apps on my phone, but I know there are some cool apps out there, especially ones related to wellness. What apps should I take a look at if i'm focusing on my overall health more?",
@@ -117,7 +117,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 11,
+        "user_id": 1,
         "space_id": 2,
         "title": "Run or Exercise at Home?",
         "context": "My goal for the next year is to exercise and workout more for my overall health. I don't work from home anymore, so part of me wants to workout/exercise at home. Should I do that, or exercise outdoors somewhere?",
@@ -171,7 +171,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 20,
+        "user_id": 1,
         "space_id": 3,
         "title": "Drinking Water More Regularly",
         "context": "One of the easiest things to do when trying to get healthier I figured is drinking water more consistently throughout the day. It's been much harder than I anticipated. What are some easy techniques I could employ to make sure I don't forget to drink throughout the day?",
