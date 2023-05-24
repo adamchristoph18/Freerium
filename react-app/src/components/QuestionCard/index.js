@@ -78,12 +78,12 @@ function QuestionCard({ question, show }) {
                     }
             {show && (
                 <div className="voting">
-                    <div className="upvote-downvote clickable" onClick={upvote}>
+                    <button className="upvote-downvote clickable" onClick={upvote}>
                         Upvote {question.upvotes}
-                    </div>
-                    <div className="upvote-downvote clickable" onClick={downvote}>
+                    </button>
+                    <button className="upvote-downvote clickable" onClick={downvote}>
                         Downvote {question.downvotes}
-                    </div>
+                    </button>
                 </div>
             )}
         </div>

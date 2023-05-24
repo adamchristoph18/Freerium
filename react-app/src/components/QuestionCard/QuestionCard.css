@@ -60,12 +60,16 @@
 }
 
 .upvote-downvote {
-    width: fit-content;
-    margin: 5px 0 5px 10px;
+    width: 150px;
+    margin: 5px 0 10px 10px;
     padding: 5px 10px 5px 10px;
     background-color: white;
     border-radius: 10px;
-    border: 2px solid rgb(185, 43, 39);
+}
+
+.upvote-downvote:hover {
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, .3);
+    transition: ease-in .15s;
 }
 
 .voting {
