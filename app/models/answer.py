@@ -27,10 +27,12 @@ class Answer(db.Model):
     user = db.relationship('User', back_populates='answers')
 
     def upvoted(self):
-        return self.upvotes + 1
+        self.upvotes += 1
+        return self.upvotes
 
     def downvoted(self):
-        return self.downvotes - 1
+        self.downvotes -= 1
+        return self.upvotes
 
     def to_dict(self):
         return {
