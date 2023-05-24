@@ -75,3 +75,12 @@
 .voting {
     display: flex;
 }
+
+.upvote-downvote-aggregate {
+    width: 150px;
+    color: white;
+    margin: 5px 0 10px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(11, 2, 169);
+    border-radius: 10px;
+}

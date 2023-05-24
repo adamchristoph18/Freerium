@@ -7,7 +7,7 @@ import ConfirmDeleteModalButton from "../ConfirmDeleteModalButton";
 import QuestionFormModal from "../QuestionFormModal";
 import AnswerFormModal from "../AnswerFormModal";
 import OpenCreateAnswerModalButton from "../OpenCreateAnswerModalButton";
-import { upvoteQuestionThunk } from "../../store/questions";
+import { upvoteQuestionThunk, downvoteQuestionThunk } from "../../store/questions";
 import "./QuestionCard.css";
 
 function QuestionCard({ question, show }) {
@@ -30,6 +30,7 @@ function QuestionCard({ question, show }) {
     const downvote = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        dispatch(downvoteQuestionThunk(question.id));
         return;
     };
 
@@ -83,6 +84,9 @@ function QuestionCard({ question, show }) {
                     </button>
                     <button className="upvote-downvote clickable" onClick={downvote}>
                         Downvote {question.downvotes}
+                    </button>
+                    <button className="upvote-downvote-aggregate">
+                        Aggregate {question.upvotes + question.downvotes}
                     </button>
                 </div>
             )}

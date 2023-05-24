@@ -5,6 +5,7 @@ const DELETE_QUESTION = "questions/DELETE_QUESTION";
 const UPDATE_QUESTION = "questions/UPDATE_QUESTION";
 const DISPLAY_QUESTION = "questions/DISPLAY_QUESTION";
 const UPVOTE_QUESTION = "questions/UPVOTE_QUESTION";
+const DOWNVOTE_QUESTION = "questions/DOWNVOTE_QUESTION";
 
 // Action creators
 const getAllQuestions = (questions) => ({
@@ -34,6 +35,11 @@ const getSingleQuestion = (question) => ({
 
 const upvoteQuestion = (question) => ({
     type: UPVOTE_QUESTION,
+    question
+});
+
+const downvoteQuestion = (question) => ({
+    type: DOWNVOTE_QUESTION,
     question
 });
 
@@ -123,6 +129,22 @@ export const upvoteQuestionThunk = (questionId) => async (dispatch) => {
     }
 };
 
+export const downvoteQuestionThunk = (questionId) => async (dispatch) => {
+    const response = await fetch(`/api/questions/${questionId}/down`, {
+        method: 'PUT',
+        body: questionId
+    });
+
+    if (response.ok) {
+        const { question } = await response.json();
+        await dispatch(downvoteQuestion(question));
+        return null;
+    } else {
+        const errorResponse = await response.json();
+        return errorResponse.errors;
+    }
+};
+
 // Questions reducer
 
 const initialState = { allQuestions: {}, singleQuestion: null };
@@ -159,6 +181,11 @@ const questionsReducer = (state = initialState, action) => {
             return newState;
         }
         case UPVOTE_QUESTION: {
+            const newState = {...state, singleQuestion: {...state.singleQuestion}};
+            newState.singleQuestion = action.question;
+            return newState;
+        }
+        case DOWNVOTE_QUESTION: {
             const newState = {...state, singleQuestion: {...state.singleQuestion}};
             newState.singleQuestion = action.question;
             return newState;
