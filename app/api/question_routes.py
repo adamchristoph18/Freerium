@@ -132,3 +132,18 @@ def singe_question_get(id):
     if not question:
         {'errors': 'Question does not exist'}
     return {'question': question.to_dict()}
+
+
+@question_routes.route('/<int:id>/up', methods=['PUT'])
+@login_required
+def upvote_question(id):
+    """
+    Route to upvote a single question by id
+    """
+    question = Question.query.get(id)
+    if not question:
+        {'errors': 'Question does not exist'}
+
+    question.upvoted()
+
+    return {'question': question.to_dict()}
