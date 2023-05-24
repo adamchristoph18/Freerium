@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import OpenConfirmDeleteModalButton from '../OpenConfirmDeleteModalButton';
 import OpenUpdateAnswerModalButton from '../OpenUpdateAnswerButton';
 import AnswerFormModal from '../AnswerFormModal';
@@ -10,10 +11,12 @@ function AnswerCard({ answer, questionId }) {
 	const sessionUser = useSelector(state => state.session.user);
     const author = answer.user;
 
+    const history = useHistory();
+
     const userWroteAnswer = () => author.id === sessionUser?.id;
 
     return (
-        <div className="answer-card-container">
+        <div className="answer-card-container clickable" onClick={() => {history.push(`/questions/${questionId}`)}}>
             <div className="answer-author">
                 Answer published by {userWroteAnswer() ? "you" : author.first_name}
             </div>

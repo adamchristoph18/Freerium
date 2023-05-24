@@ -1,7 +1,7 @@
 // Action type constants
 const GET_ALL_ANSWERS = "answers/GET_ALL_ANSWERS";
 const ADD_ANSWER = "answers/ADD_ANSWER";
-const UPDATE_QUESTION = "answers/UPDATE_ANSWER";
+const UPDATE_ANSWER = "answers/UPDATE_ANSWER";
 const DELETE_ANSWER = "answers/DELETE_ANSWER";
 
 // Action creators
@@ -16,7 +16,7 @@ const addAnswer = (answer) => ({
 });
 
 const updateAnswer = (answer) => ({
-    type: UPDATE_QUESTION,
+    type: UPDATE_ANSWER,
     answer
 });
 
@@ -58,7 +58,6 @@ export const addNewAnswerThunk = (answer) => async (dispatch) => {
 };
 
 export const updateAnswerThunk = (answer) => async (dispatch) => {
-    // console.log('yeet ---------------> ', answer);
     const { id, body } = answer;
     const response = await fetch(`/api/answers/${id}/update`, {
         method: 'PUT',
@@ -94,7 +93,7 @@ const initialState = { allAnswers: {} };
 const answersReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_ANSWERS: {
-            const newState = {...state, allAnswers: {...state.allAnswers}};
+            const newState = { allAnswers: {} };
             action.answers.forEach(answer => {
                 newState.allAnswers[answer.id] = answer;
             });
@@ -105,7 +104,7 @@ const answersReducer = (state = initialState, action) => {
             newState.allAnswers[action.answer.id] = action.answer;
             return newState;
         }
-        case UPDATE_QUESTION: {
+        case UPDATE_ANSWER: {
             const newState = {...state, allAnswers: {...state.allAnswers}};
             newState.allAnswers[action.answer.id] = action.answer;
             return newState;
