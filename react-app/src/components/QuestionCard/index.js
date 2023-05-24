@@ -16,6 +16,12 @@ function QuestionCard({ question }) {
 
     const userWroteQuestion = () => author.id === sessionUser?.id;
 
+    const upvote = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+    }
+
     return (
         <div className="question-card clickable" onClick={(e) => history.push(`/questions/${question.id}`)}>
             <div className="question-top-line">
@@ -35,11 +41,6 @@ function QuestionCard({ question }) {
                     className="question-image"
                     src={question.image_url} alt="" />
             </div>
-            {/* <div>
-                Answer
-                Upvotes {question.upvotes}
-                Downvotes {question.downvotes}
-            </div> */}
             {userWroteQuestion() ? (
                 <div className="author-options">
                     <OpenConfirmDeleteModalButton
@@ -64,6 +65,14 @@ function QuestionCard({ question }) {
                         }
                     />
                     }
+            <div className="voting">
+                <div className="upvote-downvote clickable" onClick={upvote}>
+                    Upvote {question.upvotes}
+                </div>
+                <div className="upvote-downvote clickable" onClick={upvote}>
+                    Downvote {question.downvotes}
+                </div>
+            </div>
         </div>
     )
 }
