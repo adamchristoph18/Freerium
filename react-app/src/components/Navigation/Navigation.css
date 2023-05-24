@@ -66,16 +66,14 @@
 
 .profile-dropdown {
   position: absolute;
-  /* margin-top: 400px; */
   top: 60px;
   right: 150px;
-  width: 250px;
+  width: 350px;
   display: flex;
   align-items: center;
   flex-flow: column;
-  justify-content: space-between;
   background-color: white;
-  /* border: 2px solid green; */
+  border-radius: 5px;
 }
 
 .user-img {

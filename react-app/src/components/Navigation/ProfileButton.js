@@ -39,12 +39,11 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      {/* <i onClick={openMenu} className="fas fa-user-circle clickable profile-icon" /> */}
       <img onClick={openMenu} className="user-img clickable" src={user.profile_image_url} alt="" />
       <div className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <span>Hello, {user.username}</span>
+            <span>Hello, {user.username}!</span>
             <span>{user.email}
             </span>
             <span className="log-out clickable site-color-b" onClick={handleLogout}>Log Out</span>
