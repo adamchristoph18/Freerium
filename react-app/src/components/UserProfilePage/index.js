@@ -77,7 +77,7 @@ function UserProfilePage({ user }) {
                         myAnswers.map(a => (
                             <AnswerCard answer={a} questionId={a.question.id} key={a.id} />
                         ))
-                    ) : ( <NothingToShow /> )
+                    ) : ( <NothingToShow noAnswers={true} /> )
                 )}
             </div>
         </div>
