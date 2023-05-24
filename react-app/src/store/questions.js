@@ -120,8 +120,9 @@ const questionsReducer = (state = initialState, action) => {
             return newState;
         }
         case DELETE_QUESTION: {
-            const newState = {...state, allQuestions: {...state.allQuestions}};
+            const newState = {...state, allQuestions: {...state.allQuestions}, singleQuestion: {...state.singleQuestion}};
             delete newState.allQuestions[action.questionId];
+            newState.singleQuestion = null;
             return newState;
         }
         case UPDATE_QUESTION: {

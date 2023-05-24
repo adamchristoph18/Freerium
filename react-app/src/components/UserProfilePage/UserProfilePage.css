@@ -1,0 +1,63 @@
+.user-profile-page {
+    min-height: 100vh;
+}
+
+.user-profile-top {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid yellow; */
+}
+
+.user-img-profile-page {
+    width: 250px;
+    border-radius: 50%;
+    margin: 30px 30px 30px 30px;
+}
+
+.user-info-card {
+    width: 580px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.your {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    width: fit-content;
+    /* border: 2px solid red; */
+}
+
+.user-detail {
+    margin-left: 20px;
+}
+
+.toggle-divs {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* border: 2px solid yellow; */
+}
+
+.your-toggle-option {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 26px;
+    /* border: 2px solid white; */
+}
+
+.your-toggle-option:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.toggle-left {
+    border-right: 2px solid white;
+}
+
+.questions-answers-container {
+    /* border: 2px solid black; */
+    padding: 20px;
+}

@@ -6,7 +6,7 @@
 }
 
 .whole-site {
-    max-width: 1400px;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     background: rgb(238,174,202);
@@ -44,6 +44,7 @@
 }
 
 .modal-errors {
+    color: red;
     margin-left: 10px;
     margin-right: 10px;
 }

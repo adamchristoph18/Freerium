@@ -50,3 +50,16 @@ class Question(db.Model):
             'user': self.user.to_dict(),
             'answers': [answer.to_dict() for answer in self.answers]
         }
+
+    def to_dict_no_user(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'context': self.context,
+            'image_url': self.image_url,
+            'upvotes': self.upvotes,
+            'downvotes': self.downvotes,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at,
+            # 'answers': [answer.to_dict() for answer in self.answers]
+        }

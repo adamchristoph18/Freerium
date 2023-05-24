@@ -40,5 +40,16 @@ class Answer(db.Model):
             'downvotes': self.downvotes,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
-            'user': self.user.to_dict()
+            'user': self.user.to_dict(),
+            'question': self.question.to_dict_no_user()
+        }
+
+    def to_dict_no_user(self):
+        return {
+            'id': self.id,
+            'body': self.body,
+            'upvotes': self.upvotes,
+            'downvotes': self.downvotes,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at
         }

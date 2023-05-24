@@ -34,10 +34,20 @@
 .freerium-splash-page {
     width: fit-content;
     margin: 0 0 0 150px;
+    font-size: 40px;
     /* border: 1px solid black; */
 }
 
 .site-tag-line {
-    margin: 30px 5px 0 150px;
+    margin: 30px 10px 0 150px;
     /* border: 1px solid black; */
+}
+
+.freerium-plus-logo {
+    display: flex;
+}
+
+.site-logo-splash {
+    margin-left: 10px;
+    /* border: 2px solid red; */
 }
