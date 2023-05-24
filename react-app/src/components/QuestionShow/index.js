@@ -21,7 +21,7 @@ function QuestionShow() {
     return (
         <div className='question-show-container'>
             <div className='question-show-left'>
-                <QuestionCard question={questionObject} />
+                <QuestionCard question={questionObject} show={true} />
             </div>
             <div className='question-show-right'>
                 {questionObject.answers.length > 0 ? (

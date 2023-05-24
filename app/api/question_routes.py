@@ -145,5 +145,6 @@ def upvote_question(id):
         {'errors': 'Question does not exist'}
 
     question.upvoted()
+    db.session.commit()
 
     return {'question': question.to_dict()}

@@ -1,15 +1,19 @@
 import { useHistory } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import OpenConfirmDeleteModalButton from "../OpenConfirmDeleteModalButton";
 import OpenUpdateQuestionModalButton from "../OpenUpdateQuestionModalButton";
 import ConfirmDeleteModalButton from "../ConfirmDeleteModalButton";
 import QuestionFormModal from "../QuestionFormModal";
 import AnswerFormModal from "../AnswerFormModal";
 import OpenCreateAnswerModalButton from "../OpenCreateAnswerModalButton";
+import { upvoteQuestionThunk } from "../../store/questions";
 import "./QuestionCard.css";
 
-function QuestionCard({ question }) {
+function QuestionCard({ question, show }) {
     const history = useHistory();
+    const dispatch = useDispatch();
+
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
     const answers = question.answers;
@@ -19,6 +23,7 @@ function QuestionCard({ question }) {
     const upvote = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        dispatch(upvoteQuestionThunk(question.id));
         return;
     };
 
@@ -71,14 +76,16 @@ function QuestionCard({ question }) {
                         }
                     />
                     }
-            <div className="voting">
-                <div className="upvote-downvote clickable" onClick={upvote}>
-                    Upvote {question.upvotes}
+            {show && (
+                <div className="voting">
+                    <div className="upvote-downvote clickable" onClick={upvote}>
+                        Upvote {question.upvotes}
+                    </div>
+                    <div className="upvote-downvote clickable" onClick={downvote}>
+                        Downvote {question.downvotes}
+                    </div>
                 </div>
-                <div className="upvote-downvote clickable" onClick={downvote}>
-                    Downvote {question.downvotes}
-                </div>
-            </div>
+            )}
         </div>
     )
 }
