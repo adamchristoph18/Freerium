@@ -20,7 +20,13 @@ function QuestionCard({ question }) {
         e.preventDefault();
         e.stopPropagation();
         return;
-    }
+    };
+
+    const downvote = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+    };
 
     return (
         <div className="question-card clickable" onClick={(e) => history.push(`/questions/${question.id}`)}>
@@ -69,7 +75,7 @@ function QuestionCard({ question }) {
                 <div className="upvote-downvote clickable" onClick={upvote}>
                     Upvote {question.upvotes}
                 </div>
-                <div className="upvote-downvote clickable" onClick={upvote}>
+                <div className="upvote-downvote clickable" onClick={downvote}>
                     Downvote {question.downvotes}
                 </div>
             </div>
