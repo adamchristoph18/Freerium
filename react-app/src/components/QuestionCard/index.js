@@ -9,10 +9,12 @@ import AnswerFormModal from "../AnswerFormModal";
 import OpenCreateAnswerModalButton from "../OpenCreateAnswerModalButton";
 import { upvoteQuestionThunk, downvoteQuestionThunk } from "../../store/questions";
 import "./QuestionCard.css";
+import { useState } from "react";
 
 function QuestionCard({ question, show }) {
     const history = useHistory();
     const dispatch = useDispatch();
+    const [userTry, setUserTry] = useState(false);
 
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
@@ -23,7 +25,13 @@ function QuestionCard({ question, show }) {
     const upvote = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        dispatch(upvoteQuestionThunk(question.id));
+
+        if (userWroteQuestion()) {
+            setUserTry(true);
+        } else {
+            dispatch(upvoteQuestionThunk(question.id));
+            setUserTry(false);
+        }
         return;
     };
 
@@ -78,17 +86,20 @@ function QuestionCard({ question, show }) {
                     />
                     }
             {show && (
-                <div className="voting">
-                    <button className="upvote-downvote clickable" onClick={upvote}>
-                        Upvote {question.upvotes}
-                    </button>
-                    <button className="upvote-downvote clickable" onClick={downvote}>
-                        Downvote {question.downvotes}
-                    </button>
-                    <button className="upvote-downvote-aggregate">
-                        Aggregate {question.upvotes + question.downvotes}
-                    </button>
-                </div>
+                <>
+                    <div className="voting">
+                        <button className="upvote-downvote clickable" onClick={upvote}>
+                            Upvote {question.upvotes}
+                        </button>
+                        <button className="upvote-downvote clickable" onClick={downvote}>
+                            Downvote {question.downvotes}
+                        </button>
+                        <button className="upvote-downvote-aggregate">
+                            Aggregate {question.upvotes + question.downvotes}
+                        </button>
+                    </div>
+                    {userTry && ( <p className="author-cant-vote">*You can't vote on your own question</p> )}
+                </>
             )}
         </div>
     )

@@ -84,3 +84,11 @@
     background-color: rgb(11, 2, 169);
     border-radius: 10px;
 }
+
+.author-cant-vote {
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
