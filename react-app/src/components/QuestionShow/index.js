@@ -16,7 +16,7 @@ function QuestionShow() {
         dispatch(displayQuestionThunk(questionId));
     }, [dispatch, questionId]);
 
-    if (!questionObject) return null;
+    if (!questionObject || questionObject.id !== parseInt(questionId)) return null;
 
     return (
         <div className='question-show-container'>
