@@ -10,18 +10,20 @@ function ConfirmDeleteModalButton({ question }) {
     const location = useLocation();
     const dispatch = useDispatch();
 
+    const deleteQuestion = async (e) => {
+        await dispatch(deleteQuestionThunk(question.id));
+        if (location.pathname !== '/profile') {
+            history.push('/');
+            }
+        closeModal();
+    };
+
     return (
         <>
             <h2 className="modal-title are-u-sure-delete">Delete your question titled "{question.title}"?</h2>
             <div
                 className="yes-confirm clickable site-color-b"
-                onClick={() => {
-                    dispatch(deleteQuestionThunk(question.id));
-                    if (location.pathname !== '/profile') {
-                        history.push('/');
-                    }
-                    closeModal();
-                }}
+                onClick={deleteQuestion}
             >
                 Yes please!
             </div>
