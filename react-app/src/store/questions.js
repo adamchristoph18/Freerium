@@ -152,7 +152,7 @@ const initialState = { allQuestions: {}, singleQuestion: null };
 const questionsReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_QUESTIONS: {
-            const newState = {...state, allQuestions: {}};
+            const newState = {allQuestions: {}};
             action.questions.forEach(question => {
                 newState.allQuestions[question.id] = question;
             });
