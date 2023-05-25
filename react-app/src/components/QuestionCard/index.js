@@ -38,7 +38,13 @@ function QuestionCard({ question, show }) {
     const downvote = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        dispatch(downvoteQuestionThunk(question.id));
+
+        if (userWroteQuestion()) {
+            setUserTry(true);
+        } else {
+            dispatch(downvoteQuestionThunk(question.id));
+            setUserTry(false);
+        }
         return;
     };
 
