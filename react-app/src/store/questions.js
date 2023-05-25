@@ -152,7 +152,7 @@ const initialState = { allQuestions: {}, singleQuestion: null };
 const questionsReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_QUESTIONS: {
-            const newState = {...state, allQuestions: {...state.allQuestions}};
+            const newState = {...state, allQuestions: {}};
             action.questions.forEach(question => {
                 newState.allQuestions[question.id] = question;
             });
@@ -176,17 +176,17 @@ const questionsReducer = (state = initialState, action) => {
             return newState;
         }
         case DISPLAY_QUESTION: {
-            const newState = {...state, singleQuestion: {...state.singleQuestion}};
+            const newState = {...state, singleQuestion: {}};
             newState.singleQuestion = action.question;
             return newState;
         }
         case UPVOTE_QUESTION: {
-            const newState = {...state, singleQuestion: {...state.singleQuestion}};
+            const newState = {...state, singleQuestion: {}};
             newState.singleQuestion = action.question;
             return newState;
         }
         case DOWNVOTE_QUESTION: {
-            const newState = {...state, singleQuestion: {...state.singleQuestion}};
+            const newState = {...state, singleQuestion: {}};
             newState.singleQuestion = action.question;
             return newState;
         }
