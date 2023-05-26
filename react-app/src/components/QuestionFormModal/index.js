@@ -14,6 +14,7 @@ function QuestionFormModal({ type, title, question }) {
     const [context, setContext] = useState("");
     const [image, setImage] = useState(null);
 	const [loading, setLoading] = useState(false);
+    const [backendErrors, setBackendErrors] = useState(false);
     const history = useHistory();
 
     const [errors, setErrors] = useState([]);
