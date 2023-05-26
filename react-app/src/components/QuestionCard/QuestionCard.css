@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column;
     width: 100%;
+    max-width: 1000px;
     margin: 10px 0;
     border-radius: 10px;
     transition: transform .2s;

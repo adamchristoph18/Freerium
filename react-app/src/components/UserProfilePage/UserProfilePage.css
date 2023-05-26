@@ -60,6 +60,11 @@
 }
 
 .questions-answers-container {
-    padding: 20px 100px 50px 100px;
+    padding: 50px 100px 50px 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     /* border: 2px solid black; */
+
 }
