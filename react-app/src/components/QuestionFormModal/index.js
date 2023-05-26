@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PuffLoader from "react-spinners/PuffLoader";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
@@ -11,9 +12,8 @@ function QuestionFormModal({ type, title, question }) {
     const [questionTitle, setQuestionTitle] = useState("");
     const [space, setSpace] = useState("Miscellaneous");
     const [context, setContext] = useState("");
-    // const [imageUrl, setImageUrl] = useState("");
     const [image, setImage] = useState(null);
-	const [imageLoading, setImageLoading] = useState(false);
+	const [loading, setLoading] = useState(false);
     const history = useHistory();
 
     const [errors, setErrors] = useState([]);
@@ -29,6 +29,14 @@ function QuestionFormModal({ type, title, question }) {
         }
     }, []);
 
+    const override = {
+        display: "absolute",
+        margin: "0 auto",
+        borderColor: "red",
+        bottom: "320px",
+        right: "150px"
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -42,16 +50,6 @@ function QuestionFormModal({ type, title, question }) {
             'Miscellaneous': 7
         };
 
-        // const newQuestion = {
-        //     title: questionTitle,
-        //     context,
-        //     imageUrl,
-        //     upvotes: 0,
-        //     downvotes: 0,
-        //     userId: sessionUser.id,
-        //     spaceId: spacesObj[space]
-        // };
-
 		const formDataNew = new FormData();
         formDataNew.append("title", questionTitle);
         formDataNew.append("context", context);
@@ -61,14 +59,6 @@ function QuestionFormModal({ type, title, question }) {
         formDataNew.append("userId", sessionUser.id);
         formDataNew.append("spaceId", spacesObj[space]);
 
-
-        // const updatedQuestion = {
-        //     id: question?.id,
-        //     title: questionTitle,
-        //     context,
-        //     imageUrl
-        // };
-
         const formDataUpdate = new FormData();
         formDataUpdate.append("title", questionTitle);
         formDataUpdate.append("context", context);
@@ -76,7 +66,7 @@ function QuestionFormModal({ type, title, question }) {
 
         // aws uploads can be a bit slow—displaying
 		// some sort of loading message is a good idea
-		setImageLoading(true);
+		setLoading(true);
 
         let data;
         if (type === "create") {
@@ -163,6 +153,12 @@ function QuestionFormModal({ type, title, question }) {
                 </label>
                 <button className="clickable submit-question site-color-b" type="submit">
                     {type === 'create' ? "Add Question" : "Update Question"}</button>
+                    <PuffLoader
+                        loading={loading}
+                        color="#36d7b7"
+                        cssOverride={override}
+                        size={150}
+                        />
             </form>
         </>
     )
