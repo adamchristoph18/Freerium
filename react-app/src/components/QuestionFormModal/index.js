@@ -14,7 +14,6 @@ function QuestionFormModal({ type, title, question }) {
     const [context, setContext] = useState("");
     const [image, setImage] = useState(null);
 	const [loading, setLoading] = useState(false);
-    const history = useHistory();
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
@@ -66,7 +65,9 @@ function QuestionFormModal({ type, title, question }) {
 
         // aws uploads can be a bit slow—displaying
 		// some sort of loading message is a good idea
-		setLoading(true);
+		if (image) {
+		    setLoading(true);
+        }
 
         let data;
         if (type === "create") {
