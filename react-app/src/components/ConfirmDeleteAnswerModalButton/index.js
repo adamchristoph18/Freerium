@@ -1,5 +1,4 @@
 import { useModal } from "../../context/Modal";
-import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteAnswerThunk } from "../../store/answers";
 import { displayQuestionThunk } from '../../store/questions';
@@ -7,7 +6,6 @@ import "./ConfirmDeleteAnswerModalButton.css";
 
 function ConfirmDeleteAnswerModalButton({ answer, questionId }) {
     const { closeModal } = useModal();
-    const history = useHistory();
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {

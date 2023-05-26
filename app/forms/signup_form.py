@@ -26,14 +26,13 @@ def username_exists(form, field):
 def valid_email(form, field):
     email = field.data
     valid_email = re.match(r"[A-Za-z0-9!_-]*@[A-Za-z0-9!_-]*\.[\w]*", email)
-    if not valid_email:
+    if not valid_email or email[0] == '@':
         raise ValidationError('Please provide a valid email address.')
 
 class SignUpForm(FlaskForm):
     firstName = StringField('firstName', validators=[DataRequired(), Length(1, 40)])
     lastName = StringField('lastName', validators=[DataRequired(), Length(1, 40)])
     username = StringField('username', validators=[DataRequired(), username_exists, Length(3, 20)])
-    email = StringField('email', validators=[DataRequired(), user_exists, valid_email])
-    # profileImageUrl = StringField('profileImageUrl')
+    email = StringField('email', validators=[DataRequired(), user_exists, valid_email, Length(5, 30)])
     image = FileField("profileImage", validators=[FileAllowed(list(ALLOWED_EXTENSIONS))])
-    password = StringField('password', validators=[DataRequired()])
+    password = StringField('password', validators=[DataRequired(), Length(5, 30)])

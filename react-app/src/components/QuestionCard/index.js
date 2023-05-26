@@ -1,20 +1,52 @@
 import { useHistory } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import OpenConfirmDeleteModalButton from "../OpenConfirmDeleteModalButton";
 import OpenUpdateQuestionModalButton from "../OpenUpdateQuestionModalButton";
 import ConfirmDeleteModalButton from "../ConfirmDeleteModalButton";
 import QuestionFormModal from "../QuestionFormModal";
 import AnswerFormModal from "../AnswerFormModal";
 import OpenCreateAnswerModalButton from "../OpenCreateAnswerModalButton";
+import { upvoteQuestionThunk, downvoteQuestionThunk } from "../../store/questions";
 import "./QuestionCard.css";
+import { useState } from "react";
 
-function QuestionCard({ question }) {
+function QuestionCard({ question, show }) {
     const history = useHistory();
+    const dispatch = useDispatch();
+    const [userTry, setUserTry] = useState(false);
+
 	const sessionUser = useSelector(state => state.session.user);
     const author = question.user;
     const answers = question.answers;
 
     const userWroteQuestion = () => author.id === sessionUser?.id;
+
+    const upvote = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (userWroteQuestion()) {
+            setUserTry(true);
+        } else {
+            dispatch(upvoteQuestionThunk(question.id));
+            setUserTry(false);
+        }
+        return;
+    };
+
+    const downvote = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (userWroteQuestion()) {
+            setUserTry(true);
+        } else {
+            dispatch(downvoteQuestionThunk(question.id));
+            setUserTry(false);
+        }
+        return;
+    };
 
     return (
         <div className="question-card clickable" onClick={(e) => history.push(`/questions/${question.id}`)}>
@@ -35,11 +67,6 @@ function QuestionCard({ question }) {
                     className="question-image"
                     src={question.image_url} alt="" />
             </div>
-            {/* <div>
-                Answer
-                Upvotes {question.upvotes}
-                Downvotes {question.downvotes}
-            </div> */}
             {userWroteQuestion() ? (
                 <div className="author-options">
                     <OpenConfirmDeleteModalButton
@@ -64,6 +91,22 @@ function QuestionCard({ question }) {
                         }
                     />
                     }
+            {show && (
+                <>
+                    <div className="voting">
+                        <button className="upvote-downvote clickable" onClick={upvote}>
+                            Upvote {question.upvotes}
+                        </button>
+                        <button className="upvote-downvote clickable" onClick={downvote}>
+                            Downvote {question.downvotes}
+                        </button>
+                        <button className="upvote-downvote-aggregate">
+                            Aggregate {question.upvotes + question.downvotes}
+                        </button>
+                    </div>
+                    {userTry && ( <p className="author-cant-vote">*You can't vote on your own question</p> )}
+                </>
+            )}
         </div>
     )
 }

@@ -45,7 +45,6 @@ def add_question():
     new_question = Question(
         title=data['title'],
         context=data['context'],
-        # image_url=data['imageUrl'],
         upvotes=data['upvotes'],
         downvotes=data['downvotes'],
         user_id=data['userId'],
@@ -131,4 +130,35 @@ def singe_question_get(id):
     question = Question.query.get(id)
     if not question:
         {'errors': 'Question does not exist'}
+    return {'question': question.to_dict()}
+
+
+@question_routes.route('/<int:id>/up', methods=['PUT'])
+@login_required
+def upvote_question(id):
+    """
+    Route to upvote a single question by id
+    """
+    question = Question.query.get(id)
+    if not question:
+        {'errors': 'Question does not exist'}
+
+    question.upvoted()
+    db.session.commit()
+
+    return {'question': question.to_dict()}
+
+@question_routes.route('/<int:id>/down', methods=['PUT'])
+@login_required
+def downvote_question(id):
+    """
+    Route to upvote a single question by id
+    """
+    question = Question.query.get(id)
+    if not question:
+        {'errors': 'Question does not exist'}
+
+    question.downvoted()
+    db.session.commit()
+
     return {'question': question.to_dict()}
