@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
 import QuestionCard from "../QuestionCard";
+import LoadingPage from "../LoadingPage";
 import "./AllQuestions.css";
 
 
@@ -16,6 +17,8 @@ function AllQuestions() {
         dispatch(getAllQuestionsThunk());
         dispatch(getAllAnswersThunk());
     }, [dispatch, questions.length]);
+
+    if (!questions.length) return <LoadingPage />
 
     return (
         <div className="all-questions-div">

@@ -17,6 +17,10 @@ function QuestionShow() {
         dispatch(displayQuestionThunk(questionId));
     }, [dispatch, questionId]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     if (!questionObject || questionObject.id !== parseInt(questionId)) return <LoadingPage />;
 
     return (
