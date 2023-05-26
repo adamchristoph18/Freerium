@@ -22,6 +22,7 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
+    padding-left: 50px;
     /* border: 2px solid red; */
 }
 
