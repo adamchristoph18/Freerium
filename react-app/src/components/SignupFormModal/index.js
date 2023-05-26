@@ -20,6 +20,14 @@ function SignupFormModal() {
 	const [errors, setErrors] = useState([]);
 	const { closeModal } = useModal();
 
+	const override = {
+		display: "absolute",
+		margin: "0 auto",
+		borderColor: "red",
+		bottom: "320px",
+		right: "150px"
+	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const formData = new FormData();
@@ -134,7 +142,13 @@ function SignupFormModal() {
 					/>
 				</label>
 				<button className="sign-up-button site-color-b clickable" type="submit">Sign Up</button>
-				{imageLoading && <p className="loading-p">Loading...</p>}
+				{/* {imageLoading && <p className="loading-p">Loading...</p>} */}
+				<PuffLoader
+                        loading={imageLoading}
+                        color="#36d7b7"
+                        cssOverride={override}
+                        size={150}
+                        />
 			</form>
 		</>
 	);
