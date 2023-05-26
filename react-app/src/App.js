@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import AllQuestions from "./components/AllQuestions";
 import QuestionShow from "./components/QuestionShow";
 import UserProfilePage from "./components/UserProfilePage";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
                 <Route exact path="/"><AllQuestions /></Route>
                 <Route path="/questions/:questionId"><QuestionShow /></Route>
                 <Route path="/profile"><UserProfilePage user={user} /></Route>
+                <PageNotFound />
               </Switch>
               <Footer />
             </>
