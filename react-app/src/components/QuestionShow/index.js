@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { displayQuestionThunk } from '../../store/questions';
 import QuestionCard from '../QuestionCard';
 import AnswerCard from '../AnswerCard';
+import LoadingPage from '../LoadingPage';
 import "./QuestionShow.css";
 
 
@@ -16,7 +17,7 @@ function QuestionShow() {
         dispatch(displayQuestionThunk(questionId));
     }, [dispatch, questionId]);
 
-    if (!questionObject || questionObject.id !== parseInt(questionId)) return null;
+    if (!questionObject || questionObject.id !== parseInt(questionId)) return <LoadingPage />;
 
     return (
         <div className='question-show-container'>
