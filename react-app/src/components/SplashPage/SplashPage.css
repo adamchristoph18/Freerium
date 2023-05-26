@@ -14,6 +14,7 @@
 
 .left-side-content {
     margin-bottom: 90px;
+    width: fit-content;
     /* border: 2px solid blue; */
 }
 
@@ -49,6 +50,6 @@
 }
 
 .site-logo-splash {
-    margin-left: 10px;
+    width: 40%;
     /* border: 2px solid red; */
 }
