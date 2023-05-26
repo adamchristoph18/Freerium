@@ -168,7 +168,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 1,
+        "user_id": 20,
         "question_id": 21,
         "body": "That's awesome that you joined a gym! That was me a couple of years ago, and I also was clueless at the beginning. The key is to concentrate on certain parts of your body each day, and only work out for an hour or so. Don't forget to take a rest day or two each week.",
         "upvotes": 0,
@@ -273,7 +273,7 @@
         "downvotes": 0
     },
     {
-        "user_id": 4,
+        "user_id": 1,
         "question_id": 43,
         "body": "Another option is to try your hand at geocaching, a modern-day treasure hunt. Geocaching involves using GPS coordinates to find hidden containers that are hidden in various locations around the world. It's a fun and engaging activity that can take you to interesting places you may not have discovered otherwise. You can start by downloading a geocaching app and searching for caches near your location.",
         "upvotes": 0,
