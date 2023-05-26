@@ -5,6 +5,9 @@
 .question-show-left {
     height: 100vh;
     width: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     margin-left: 25px;
     padding-top: 60px;
     padding-bottom: 250px;
