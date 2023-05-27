@@ -33,7 +33,10 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
+
+        if (body.length) {
+            setLoading(true);
+        }
 
         const newAnswer = {
             body,
