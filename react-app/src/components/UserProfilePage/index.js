@@ -32,6 +32,10 @@ function UserProfilePage({ user }) {
         dispatch(getAllAnswersThunk());
     }, [dispatch, myQuestions.length, myAnswers.length]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     const myQuestionsClick = (e) => {
         e.preventDefault();
         setShowQuestions(true);

@@ -26,7 +26,7 @@ function ConfirmDeleteAnswerModalButton({ answer, questionId }) {
         await dispatch(deleteAnswerThunk(answer.id));
         await dispatch(displayQuestionThunk(questionId));
         closeModal();
-    }
+    };
 
     return (
         <>
