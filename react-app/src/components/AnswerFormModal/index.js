@@ -3,16 +3,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { addNewAnswerThunk, updateAnswerThunk } from "../../store/answers";
 import { displayQuestionThunk, getAllQuestionsThunk } from "../../store/questions";
 import { useModal } from "../../context/Modal";
+import PuffLoader from "react-spinners/PuffLoader";
 
 import "./AnswerFormModal.css";
 
 function AnswerFormModal({ type, title, question, answer, questionId }) {
+	const [loading, setLoading] = useState(false);
+
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [body, setBody] = useState("");
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
+
+    const override = {
+        display: "absolute",
+        margin: "0 auto",
+        borderColor: "red",
+        bottom: "200px",
+        right: "130px"
+    };
 
     useEffect(() => {
         if (type === 'update') {
@@ -22,6 +33,11 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (body.length) {
+            setLoading(true);
+        }
+
         const newAnswer = {
             body,
             upvotes: 0,
@@ -57,7 +73,7 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
             <form onSubmit={handleSubmit}>
                     <div className='modal-errors'>
                                 {Object.values(errors).map(error => (
-                                    <p key={error} className='error-p'>
+                                    <p key={error} className='error-ps'>
                                         {error}
                                     </p>
                                 ))}
@@ -75,6 +91,12 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
                 </label>
                 <button className="clickable submit-question site-color-b" type="submit">
                     {type === 'create' ? "Add Answer" : "Update Answer"}</button>
+                    <PuffLoader
+                        loading={loading}
+                        color="#36d7b7"
+                        cssOverride={override}
+                        size={150}
+                        />
             </form>
         </>
     )

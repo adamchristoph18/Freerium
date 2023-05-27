@@ -91,7 +91,7 @@ function QuestionFormModal({ type, title, question }) {
             <form onSubmit={handleSubmit}>
                 <div className='modal-errors'>
                         {Object.values(errors).map(error => (
-                            <p key={error} className='error-p'>
+                            <p key={error} className='error-ps'>
                                 {error}
                             </p>
                         ))}

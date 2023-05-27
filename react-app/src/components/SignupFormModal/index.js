@@ -66,7 +66,7 @@ function SignupFormModal() {
 			<form onSubmit={handleSubmit}>
 				<div className='modal-errors'>
 					{Object.values(errors).map(error => (
-						<p key={error} className='error-p'>
+						<p key={error} className='error-ps'>
 							{error}
 						</p>
 					))}
@@ -142,7 +142,6 @@ function SignupFormModal() {
 					/>
 				</label>
 				<button className="sign-up-button site-color-b clickable" type="submit">Sign Up</button>
-				{/* {imageLoading && <p className="loading-p">Loading...</p>} */}
 				<PuffLoader
                         loading={imageLoading}
                         color="#36d7b7"

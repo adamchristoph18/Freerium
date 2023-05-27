@@ -1,16 +1,29 @@
+import { useState } from "react";
 import { useModal } from "../../context/Modal";
 import { useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteQuestionThunk } from "../../store/questions";
+import PuffLoader from "react-spinners/PuffLoader";
 import "./ConfirmDeleteModalButton.css";
 
 function ConfirmDeleteModalButton({ question }) {
+	const [loading, setLoading] = useState(false);
+
     const { closeModal } = useModal();
     const history = useHistory();
     const location = useLocation();
     const dispatch = useDispatch();
 
+    const override = {
+        display: "absolute",
+        margin: "0 auto",
+        borderColor: "red",
+        bottom: "150px",
+        left: "80px"
+    };
+
     const deleteQuestion = async (e) => {
+        setLoading(true);
         await dispatch(deleteQuestionThunk(question.id));
         if (location.pathname !== '/profile') {
             history.push('/');
@@ -30,6 +43,12 @@ function ConfirmDeleteModalButton({ question }) {
             <div className="no-forget-it clickable site-color-b" onClick={closeModal}>
                 No, thanks
             </div>
+            <PuffLoader
+                loading={loading}
+                color="#36d7b7"
+                cssOverride={override}
+                size={150}
+                />
         </>
     )
 }

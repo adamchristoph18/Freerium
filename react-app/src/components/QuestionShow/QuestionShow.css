@@ -18,6 +18,7 @@
     width: 30%;
     display: flex;
     flex-flow: column;
+    /* overflow-y: scroll; */
     /* border: 2px solid blue; */
 }
 
