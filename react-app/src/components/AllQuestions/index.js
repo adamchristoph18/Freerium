@@ -18,6 +18,10 @@ function AllQuestions() {
         dispatch(getAllAnswersThunk());
     }, [dispatch, questions.length]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     if (!questions.length) return <LoadingPage />
 
     return (
