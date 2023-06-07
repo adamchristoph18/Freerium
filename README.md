@@ -74,6 +74,9 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 ## Backend API Routes
 
 - Get All Questions
+      - /questions/all
+      - `return { 'questions': [question.to_dict() for question in questions] }`
+
 - Get a Single Question
 - Update a Question
 - Delete a Question
