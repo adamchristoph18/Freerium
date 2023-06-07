@@ -71,9 +71,9 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 8. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
 
 
-## Backend API Routes
+# Backend API Routes
 
-- Get All Questions
+### Get All Questions
       - /questions/all
       - `return { 'questions': [question.to_dict() for question in questions] }`
 
