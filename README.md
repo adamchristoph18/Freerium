@@ -19,9 +19,9 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 
 ## Wiki Links
 
-![Features List](https://github.com/adamchristoph18/Freerium/wiki/Features-List)
-![User Stories](https://github.com/adamchristoph18/Freerium/wiki/User-Stories)
-![DB Schema](https://github.com/adamchristoph18/Freerium/wiki/API-(w-schema))
+- [Features List](https://github.com/adamchristoph18/Freerium/wiki/Features-List)
+- [User Stories](https://github.com/adamchristoph18/Freerium/wiki/User-Stories)
+- [DB Schema](https://github.com/adamchristoph18/Freerium/wiki/API-(w-schema))
 
 ## Splash Page
 
