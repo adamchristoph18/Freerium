@@ -18,20 +18,42 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 
-# Splash Page
+## Splash Page
 
 ![Screen Shot 2023-06-07 at 4 25 32 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/832adb4c-970a-4c39-b63b-fc4b39de4ec6)
 
-# Home Page
+## Home Page
 
 ![Screen Shot 2023-06-07 at 4 26 21 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/b36afa70-6720-4a04-b5b4-3b39a88e6d48)
 
-# Individual Question Page / New Question Modal
+## Individual Question Page / New Question Modal
 
 ![Screen Shot 2023-06-07 at 4 37 00 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/024b0ad9-9805-42ca-a274-0f7a4498c72c)
 
 
+## Getting Started
 
+1. Clone this repository
+      https://github.com/adamchristoph18/Freerium
+      
+2. Install dependencies into the frontend once inside react-app directory
+      - npm install
+
+3. Install dependencies into the backend from the root of the repository
+      - pipenv install
+
+4. Create a .env file using the .envexample provided
+
+5. Enter the virtual environment from the root (pipenv shell), then run the following commands to create, migrate, and seed your database:
+      - flask db migrate
+      - flask db upgrade
+      - flask seed all
+ 
+6. Start the app
+      - From the root, type 'flask run' into the CLI and hit enter
+      - In another terminal, in the react-app directory, type 'npm start' and hit enter
+
+7. Now you can use the Demo User account, or create your own!
 
 
 
