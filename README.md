@@ -23,6 +23,9 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 ![Screen Shot 2023-06-07 at 4 25 32 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/832adb4c-970a-4c39-b63b-fc4b39de4ec6)
 
 ## Home Page
+![ezgif com-optimize](https://github.com/adamchristoph18/Freerium/assets/110206190/0c4bd176-6a2f-43f9-8d43-998cba203eae)
+
+
 
 ![Screen Shot 2023-06-07 at 4 26 21 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/b36afa70-6720-4a04-b5b4-3b39a88e6d48)
 
