@@ -17,6 +17,11 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+## Wiki Links
+
+![Features List](https://github.com/adamchristoph18/Freerium/wiki/Features-List)
+![User Stories](https://github.com/adamchristoph18/Freerium/wiki/User-Stories)
+![DB Schema](https://github.com/adamchristoph18/Freerium/wiki/API-(w-schema))
 
 ## Splash Page
 
@@ -44,7 +49,13 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
       pipenv install -r requirements.txt 
       pipenv install boto3 IF USING AWS S3 BUCKET FOR IMAGE STORAGE
 
-4. Create a .env file using the .envexample provided
+4. Create a .env file using the following variables:
+      - SECRET_KEY
+      - DATABASE_URL
+      - SCHEMA
+      - S3_BUCKET (IF USING AWS S3)
+      - S3_KEY (IF USING AWS S3)
+      - S3_SECRET (IF USING AWS S3)
 
 5. Enter the virtual environment from the root (pipenv shell), then run the following commands to create, migrate, and seed your database:
       - flask db migrate
@@ -58,3 +69,16 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 7. Now you can use the Demo User account, or create your own!
 
 8. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+
+
+## Backend API Routes
+
+- Get All Questions
+- Get a Single Question
+- Update a Question
+- Delete a Question
+
+- Get All Answers
+- Update an Answer
+- Delete an Answer
+
