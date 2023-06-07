@@ -1,4 +1,22 @@
-# Freerium - A wellness app inspired by Quora.
+# Freerium
+
+Thank you for checking out my project README! Freerium is a wellness app inspired by Quora. On Freerium, users can interact with others by initially posting questions, answers, and voting on others' posts.
+
+Visit the live site here ------> [Freerium](https://freerium.onrender.com)
+
+
+# Technologies Used
+
+
+
+
+
+
+
+
+
+
+
 
 This is the starter for the Flask React project.
 
