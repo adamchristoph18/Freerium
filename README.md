@@ -5,7 +5,7 @@ Thank you for checking out my project README! Freerium is a wellness app inspire
 Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 
 
-# Technologies Used
+## Technologies Used
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -13,8 +13,25 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 ![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%23FCA121.svg?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+
+# Splash Page
+
+![Screen Shot 2023-06-07 at 4 25 32 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/832adb4c-970a-4c39-b63b-fc4b39de4ec6)
+
+# Home Page
+
+![Screen Shot 2023-06-07 at 4 26 21 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/b36afa70-6720-4a04-b5b4-3b39a88e6d48)
+
+# Individual Question Page / New Question Modal
+
+![Screen Shot 2023-06-07 at 4 37 00 PM](https://github.com/adamchristoph18/Freerium/assets/110206190/024b0ad9-9805-42ca-a274-0f7a4498c72c)
+
+
+
 
 
 
