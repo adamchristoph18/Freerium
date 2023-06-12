@@ -59,6 +59,10 @@
     .welcome-to,
     .site-tag-line,
     .freerium-splash-page {
-        margin-left: 0;
+        margin-left: 10px;
+    }
+
+    .site-logo-splash {
+        width: 25%;
     }
 }
