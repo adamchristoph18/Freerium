@@ -9,13 +9,13 @@
     flex-flow: column;
     justify-content: center;
     background-color: white;
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
 }
 
 .left-side-content {
     margin-bottom: 90px;
     width: fit-content;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
 }
 
 .splash-page-right {
@@ -52,4 +52,13 @@
 .site-logo-splash {
     width: 40%;
     /* border: 2px solid red; */
+}
+
+
+@media screen and (max-width: 1000px) {
+    .welcome-to,
+    .site-tag-line,
+    .freerium-splash-page {
+        margin-left: 0;
+    }
 }
