@@ -9,13 +9,13 @@
     flex-flow: column;
     justify-content: center;
     background-color: white;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
 }
 
 .left-side-content {
     margin-bottom: 90px;
     width: fit-content;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 .splash-page-right {
