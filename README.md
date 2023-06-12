@@ -74,14 +74,25 @@ Visit the live site here ------> [Freerium](https://freerium.onrender.com)
 # Backend API Routes
 
 ### Get All Questions
-      - /questions/all
-      - `return { 'questions': [question.to_dict() for question in questions] }`
+      - /questions/all [ @question_routes.route('/all') ]
+      - return { 'questions': [question.to_dict() for question in questions] }
 
-- Get a Single Question
-- Update a Question
-- Delete a Question
+### Update a Question
+      - /questions/{questionId}/update
+      - return { 'question': question.to_dict() }
 
-- Get All Answers
-- Update an Answer
-- Delete an Answer
+### Delete a Question
+      - /questions/{questionId}/delete
+      - return { 'question': 'question successfully deleted.' }
 
+### Get All Answers
+      - /answers/all [ @answer_routes.route('/all') ]
+      - return { 'answers': [answer.to_dict() for answer in answers] }
+
+### Update an Answer
+      - /answers/{answerId}/update
+      - return { 'answer': answer.to_dict() }
+
+### Delete an Answer
+      - /answers/{answerId}/delete
+      - return { 'answer': 'answer successfully deleted.' }
