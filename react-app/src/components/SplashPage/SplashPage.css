@@ -53,3 +53,16 @@
     width: 40%;
     /* border: 2px solid red; */
 }
+
+
+@media screen and (max-width: 1000px) {
+    .welcome-to,
+    .site-tag-line,
+    .freerium-splash-page {
+        margin-left: 10px;
+    }
+
+    .site-logo-splash {
+        width: 25%;
+    }
+}
