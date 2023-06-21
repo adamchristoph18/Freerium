@@ -1,9 +1,10 @@
 .question-show-container {
     display: flex;
+    min-height: 100vh;
 }
 
 .question-show-left {
-    height: 100vh;
+    /* min-height: 100vh; */
     width: 60%;
     margin-left: 25px;
     padding-top: 60px;
@@ -12,14 +13,21 @@
 }
 
 .question-show-right {
+    /* min-height: 100vh; */
+    height: fit-content;
     margin-left: 20px;
     padding-top: 65px;
-    padding-bottom: 250px;
+    padding-bottom: 150px;
     width: 30%;
     display: flex;
     flex-flow: column;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
+    max-height: 450px;
     /* border: 2px solid blue; */
+}
+
+.question-show-right::-webkit-scrollbar{
+    display: none;
 }
 
 .no-answers-yet {
