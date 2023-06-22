@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { useModal } from "../../context/Modal";
 import { addNewQuestionThunk, updateQuestionThunk } from "../../store/questions";
+import { getQuestionsForSpaceThunk } from "../../store/spaces";
 import "./QuestionFormModal.css";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function QuestionFormModal({ type, title, question }) {
     const dispatch = useDispatch();
@@ -13,6 +16,9 @@ function QuestionFormModal({ type, title, question }) {
     const [context, setContext] = useState("");
     const [image, setImage] = useState(null);
 	const [loading, setLoading] = useState(false);
+
+    const history = useHistory();
+    const location = useLocation();
 
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
@@ -81,6 +87,9 @@ function QuestionFormModal({ type, title, question }) {
         if (data) {
             setErrors(data);
         } else {
+            if (location.pathname.split('/')[3] === 'all-questions') {
+                await dispatch(getQuestionsForSpaceThunk(location.pathname.split('/')[2]));
+            }
             closeModal();
         }
     }

@@ -6,6 +6,7 @@ import SplashPage from "./components/SplashPage";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import AllQuestions from "./components/AllQuestions";
+import SpaceQuestions from "./components/SpaceQuestions";
 import QuestionShow from "./components/QuestionShow";
 import UserProfilePage from "./components/UserProfilePage";
 import PageNotFound from "./components/PageNotFound";
@@ -29,6 +30,7 @@ function App() {
               <Switch>
                 <Route exact path="/"><AllQuestions /></Route>
                 <Route path="/questions/:questionId"><QuestionShow /></Route>
+                <Route path="/spaces/:spaceId/all-questions"><SpaceQuestions /></Route>
                 <Route path="/profile"><UserProfilePage user={user} /></Route>
                 <PageNotFound />
               </Switch>
