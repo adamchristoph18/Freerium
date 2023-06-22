@@ -1,10 +1,12 @@
 import "./SpacesContainer.css";
 
 
-function SpacesContainer() {
+function SpacesContainer({ spaces }) {
     return (
         <div className="spaces-container">
-            Hi
+            {spaces.map(space => (
+                <span className="space-tile" key={space.id}>{space.name}</span>
+            ))}
         </div>
     )
 }
