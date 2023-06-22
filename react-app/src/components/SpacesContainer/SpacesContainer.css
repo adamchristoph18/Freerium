@@ -1,15 +1,31 @@
 .spaces-container {
-    height: 300px;
-    width: 200px;
-    position: absolute;
+    position: fixed;
     top: 75px;
-    left: 300px;
+    left: 200px;
+    width: 200px;
     background-color: white;
+    opacity: .9;
     display: flex;
     flex-flow: column;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.spaces-title {
+    align-self: center;
+    padding-left: 5px;
 }
 
 .space-tile {
     list-style: none;
     padding-left: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border: 2px solid red; */
+}
+
+.space-tile:hover {
+    color: white;
+    background-color: #27B5B9;
 }
