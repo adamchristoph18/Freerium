@@ -27,10 +27,10 @@ function ConfirmDeleteModalButton({ question }) {
         setLoading(true);
         await dispatch(deleteQuestionThunk(question.id));
         if (location.pathname.split('/')[3] === 'all-questions') {
-                await dispatch(getQuestionsForSpaceThunk(location.pathname.split('/')[2]))
+                await dispatch(getQuestionsForSpaceThunk(location.pathname.split('/')[2]));
             }
 
-        if (location.pathname !== '/profile') {
+        if (location.pathname !== '/profile' && location.pathname.split('/')[3] !== 'all-questions') {
                 history.push('/');
             }
         closeModal();
