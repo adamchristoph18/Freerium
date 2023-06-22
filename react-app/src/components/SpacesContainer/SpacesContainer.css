@@ -33,3 +33,21 @@
     background-color: #27B5B9;
     color: white;
 }
+
+@media screen and (max-width: 1350px) {
+    .spaces-container {
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .spaces-container {
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .spaces-container {
+        display: none;
+    }
+}
