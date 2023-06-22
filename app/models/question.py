@@ -44,6 +44,7 @@ class Question(db.Model):
             'context': self.context,
             'image_url': self.image_url,
             'upvotes': self.upvotes,
+            'space_id': self.space_id,
             'downvotes': self.downvotes,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
