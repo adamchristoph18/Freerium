@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { addNewAnswerThunk, updateAnswerThunk } from "../../store/answers";
 import { displayQuestionThunk, getAllQuestionsThunk } from "../../store/questions";
+import { getQuestionsForSpaceThunk } from "../../store/spaces";
 import { useModal } from "../../context/Modal";
 import PuffLoader from "react-spinners/PuffLoader";
 
@@ -11,6 +13,8 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
 	const [loading, setLoading] = useState(false);
 
     const dispatch = useDispatch();
+    const location = useLocation();
+
     const sessionUser = useSelector(state => state.session.user);
     const [body, setBody] = useState("");
 
@@ -63,6 +67,11 @@ function AnswerFormModal({ type, title, question, answer, questionId }) {
         } else {
             question ? await dispatch(displayQuestionThunk(question.id)) : await dispatch(displayQuestionThunk(questionId));
             await dispatch(getAllQuestionsThunk());
+
+            if (location.pathname.split('/')[3] === 'all-questions') {
+                await dispatch(getQuestionsForSpaceThunk(location.pathname.split('/')[2]));
+            }
+
             closeModal();
         }
     };
