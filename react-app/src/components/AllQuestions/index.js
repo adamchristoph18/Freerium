@@ -4,6 +4,7 @@ import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
 import QuestionCard from "../QuestionCard";
 import LoadingPage from "../LoadingPage";
+import SpacesContainer from "../SpacesContainer";
 import "./AllQuestions.css";
 
 
@@ -25,10 +26,13 @@ function AllQuestions() {
     if (!questions.length) return <LoadingPage />
 
     return (
-        <div className="all-questions-div">
-            {questions.map(question => (
-                <QuestionCard question={question} key={question.id} />
-            ))}
+        <div className="home-page">
+            <SpacesContainer />
+            <div className="all-questions-div">
+                {questions.map(question => (
+                    <QuestionCard question={question} key={question.id} />
+                ))}
+            </div>
         </div>
     )
 }
