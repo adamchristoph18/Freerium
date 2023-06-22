@@ -31,7 +31,6 @@ export const getQuestionsForSpaceThunk = (spaceId) => async (dispatch) => {
     if (response.ok) {
         const { questions } = await response.json();
         dispatch(getQuestionsForSpace(questions));
-
         return questions;
     }
 };
@@ -53,6 +52,7 @@ const spacesReducer = (state = initialState, action) => {
             action.questions.forEach(question => {
                 newState.space[question.id] = question;
             });
+            return newState;
         }
         default:
             return state;

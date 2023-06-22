@@ -8,6 +8,7 @@ function SpacesContainer({ spaces }) {
     return (
         <div className="spaces-container">
             <h3 className="spaces-title site-color">Spaces/Categories</h3>
+            <span className="space-tile clickable" onClick={() => history.push('/')}>All Questions</span>
             {spaces.map(space => (
                 <span
                     className="space-tile clickable"

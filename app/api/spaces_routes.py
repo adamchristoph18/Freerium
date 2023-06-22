@@ -28,5 +28,5 @@ def all_questions_for_individual_space(id):
     """
     Route to get all questions of a particular space
     """
-    questions = Question.query.where(Question.space_id == id)
+    questions = Question.query.where(Question.space_id == id).all()
     return { 'questions': [question.to_dict() for question in questions] }

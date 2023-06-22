@@ -9,7 +9,7 @@ import SpacesContainer from "../SpacesContainer";
 import "./AllQuestions.css";
 
 
-function AllQuestions() {
+function AllQuestions({ questionsForSpace }) {
     const questionsObject = useSelector(state => state.questions.allQuestions);
     const questions = Object.values(questionsObject).reverse();
 
@@ -34,7 +34,9 @@ function AllQuestions() {
         <div className="home-page">
             <SpacesContainer spaces={spaces} />
             <div className="all-questions-div">
-                {questions.map(question => (
+                {questionsForSpace ? questionsForSpace.map(question => (
+                    <QuestionCard question={question} key={question.id} />
+                )) : questions.map(question => (
                     <QuestionCard question={question} key={question.id} />
                 ))}
             </div>
