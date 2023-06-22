@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllQuestionsThunk } from "../../store/questions";
 import { getAllAnswersThunk } from "../../store/answers";
@@ -17,6 +18,7 @@ function AllQuestions({ questionsForSpace }) {
     const spaces = Object.values(spacesObject);
 
     const dispatch = useDispatch();
+    const location = useLocation();
 
     useEffect(() => {
         dispatch(getAllQuestionsThunk());
@@ -28,6 +30,7 @@ function AllQuestions({ questionsForSpace }) {
         window.scrollTo(0, 0)
     }, []);
 
+    if (questionsForSpace && questionsForSpace[0].space_id !== parseInt(location.pathname.split('/')[2])) return <LoadingPage />
     if (!questions.length) return <LoadingPage />
 
     return (
