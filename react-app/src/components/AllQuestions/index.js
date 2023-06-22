@@ -22,7 +22,7 @@ function AllQuestions({ questionsForSpace }) {
         dispatch(getAllQuestionsThunk());
         dispatch(getAllAnswersThunk());
         dispatch(getAllSpacesThunk());
-    }, [dispatch, questions.length, spaces.length]);
+    }, [dispatch, questions.length, questionsForSpace?.length, spaces.length]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

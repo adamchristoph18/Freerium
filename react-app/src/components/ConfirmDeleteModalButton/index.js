@@ -3,6 +3,7 @@ import { useModal } from "../../context/Modal";
 import { useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteQuestionThunk } from "../../store/questions";
+import { getQuestionsForSpaceThunk } from "../../store/spaces";
 import PuffLoader from "react-spinners/PuffLoader";
 import "./ConfirmDeleteModalButton.css";
 
@@ -25,8 +26,12 @@ function ConfirmDeleteModalButton({ question }) {
     const deleteQuestion = async (e) => {
         setLoading(true);
         await dispatch(deleteQuestionThunk(question.id));
+        if (location.pathname.split('/')[3] === 'all-questions') {
+                await dispatch(getQuestionsForSpaceThunk(location.pathname.split('/')[2]))
+            }
+
         if (location.pathname !== '/profile') {
-            history.push('/');
+                history.push('/');
             }
         closeModal();
     };
