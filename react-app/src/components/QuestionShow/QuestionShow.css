@@ -26,3 +26,14 @@
     font-size: 20px;
     font-style: italic;
 }
+
+@media screen and (max-width: 800px) {
+    .question-show-container {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .question-show-left {
+        margin-bottom: 30px;
+    }
+}
