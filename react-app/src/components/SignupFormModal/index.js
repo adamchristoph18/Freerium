@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
-import { signUp } from "../../store/session";
+import { signUp, login } from "../../store/session";
 import PuffLoader from "react-spinners/PuffLoader";
 import "./SignupForm.css";
 
@@ -58,6 +58,16 @@ function SignupFormModal() {
 				"Confirm Password field must be the same as the Password field",
 			]);
 		}
+	};
+
+	// demo user sign in
+	const demoUser = e => {
+		e.preventDefault();
+		return dispatch(login({ email: 'demo@aa.io', password: 'password' }))
+			.then(() => {
+				closeModal();
+				history.push('/');
+			});
 	};
 
 	return (
@@ -149,6 +159,8 @@ function SignupFormModal() {
                         size={150}
                         />
 			</form>
+			<div className="demo-user-link clickable site-color" onClick={demoUser}>
+    			Log in as a demo user instead!</div>
 		</>
 	);
 }
