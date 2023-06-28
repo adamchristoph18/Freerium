@@ -11,6 +11,7 @@ def seed_spaces():
 
     for s in spaces:
         space = Space(
+            user_id=s['user_id'],
             name=s['name'],
             description=s['description']
         )

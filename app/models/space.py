@@ -15,12 +15,17 @@ class Space(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
+    # Foreign keys
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        add_prefix_for_prod("users.id")), nullable=False)
+
     # Relationships
     questions = db.relationship('Question', back_populates='space')
 
     def to_dict(self):
         return {
             'id': self.id,
+            'user': self.user_id,
             'name': self.name,
             'description': self.description,
             'created_at': self.created_at,

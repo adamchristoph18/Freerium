@@ -1,29 +1,36 @@
 [
     {
+        "user_id": 10,
         "name": "Technology",
         "description": "This space is for questions related to all things Technology, especially Technology that you can use to better your overall health and well-being."
     },
     {
+        "user_id": 10,
         "name": "Exercise",
         "description": "This space would be an ideal follow for you to find answers or post questions if you are serious about exercising and bettering your health, but maybe don't know where to start."
     },
     {
+        "user_id": 10,
         "name": "Personal Health",
         "description": "Following this space means that you care about your mental health, want to support others that have questions about theirs, and are curious to learn more about what it takes to maintain better overall personal health."
     },
     {
+        "user_id": 10,
         "name": "Financial Well-Being",
         "description": "It would help your overall health if you have your finances in order. Not everyone knows that that means, and that is OK - because there is a lot. Follow this space to learn more and explore past questions and answers."
     },
     {
+        "user_id": 10,
         "name": "Travel",
         "description": "When working on your personal health and well-being, everyone needs a break. Haven't had one in a while? Or maybe you're planning your next vacation? Follow this space for some inspiration!"
     },
     {
+        "user_id": 10,
         "name": "Career Goals",
         "description": "Goals are awesome, especially ones pertaining to your career and future aspirations. Follow this channel if you are in the need of some advice and want your questions answered on what that next step may be for you."
     },
     {
+        "user_id": 10,
         "name": "Miscellaneous",
         "description": "Don't see a space yet on Freerium that interests you? Feel free to follow this space to get the random, and maybe a little bit of everything. This space is most welcoming of all!"
     }
