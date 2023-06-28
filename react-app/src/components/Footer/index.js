@@ -10,6 +10,9 @@ function Footer() {
                 <a href="https://github.com/adamchristoph18" target="_blank">
                     <i className="brand-icon fa-brands fa-github clickable" /></a>
             </div>
+            <div>
+                <p>JavaScript - React - Redux - AWS S3 - Python - Flask - PostgreSQL</p>
+            </div>
             <p className="site-year">@2023</p>
         </div>
     )
