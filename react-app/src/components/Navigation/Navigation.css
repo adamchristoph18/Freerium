@@ -15,6 +15,15 @@
   margin-left: 5px;
 }
 
+@media screen and (max-width: 600px) {
+  .freerium-title {
+    font-size: 12px !important;
+  }
+  .site-logo {
+    height: 20px;
+  }
+}
+
 .logged-in-as {
   font-size: 13px;
   font-style: italic;
