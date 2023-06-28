@@ -159,6 +159,8 @@ function SignupFormModal() {
                         size={150}
                         />
 			</form>
+			<div className="demo-user-link clickable site-color" onClick={demoUser}>
+    			Log in as a demo user instead!</div>
 		</>
 	);
 }
