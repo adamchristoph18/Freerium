@@ -24,3 +24,15 @@
     font-size: 20px;
     margin: 17px 0 0 15px;
 }
+
+.footer-technologies {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.technologies-container {
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
