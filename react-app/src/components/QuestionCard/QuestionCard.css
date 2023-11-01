@@ -85,6 +85,12 @@
     border-radius: 10px;
 }
 
+@media screen and (max-width: 540px) {
+    .upvote-downvote-aggregate {
+        margin-right: 10px;
+    }
+}
+
 .author-cant-vote {
     width: fit-content;
     margin-top: 0px;
