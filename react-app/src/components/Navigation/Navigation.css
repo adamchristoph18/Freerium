@@ -17,10 +17,19 @@
 
 @media screen and (max-width: 600px) {
   .freerium-title {
-    font-size: 12px !important;
+    font-size: 24px !important;
   }
   .site-logo {
-    height: 20px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .freerium-title {
+    font-size: 20px !important;
+  }
+  .site-logo {
+    display: none;
   }
 }
 
@@ -32,6 +41,12 @@
   /* border: 2px solid black; */
 }
 
+@media screen and (max-width: 600px) {
+  .logged-in-as {
+    display: none;
+  }
+}
+
 .user-page-link {
   font-size: 13px;
   text-decoration: none;
@@ -39,12 +54,14 @@
   /* border: 2px solid black; */
 }
 
+
 .navigation-bar-right {
   display: flex;
   justify-content: center;
   align-items: center;
   /* border: 2px solid black; */
 }
+
 
 .user-greeting-plus-profile-link {
   display: flex;
@@ -56,6 +73,17 @@
 .profile-icon-button {
   margin-right: 25px;
   /* border: 2px solid green; */
+}
+
+@media screen and (max-width: 600px) {
+  .user-page-link {
+    font-size: 10px;
+    margin-top: 0;
+    margin-right: 15px;
+  }
+  .profile-icon-button {
+    margin-right: 0;
+  }
 }
 
 .freerium-title {
@@ -101,4 +129,11 @@
   top: 20px;
   left: 70%;
   font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .user-img {
+    width: 40px;
+    height: 40px;
+  }
 }
